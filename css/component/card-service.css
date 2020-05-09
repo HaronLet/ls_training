@@ -1,0 +1,38 @@
+/*-------------------- c-card-service --------------------*/
+.c-card-service {
+  display: flex;
+  overflow: hidden;
+  background: #fff;
+}
+.c-card-service__figure {
+  max-width: calc(458 * 100% / 1140);
+  margin-right: calc(58 * 100% / 1140);
+  border-radius: 6px;
+  overflow: hidden;
+  line-height: 0;
+}
+.c-card-service__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 0 18px 0;
+}
+.c-card-service__header {
+  margin-bottom: 28px;
+}
+.c-card-service__title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+}
+.c-card-service__content {
+  margin-bottom: 32px;
+}
+.c-card-service__content p {
+  font-size: 16px;
+  line-height: 1.69;
+  color: #303030;
+}
+.c-card-service__footer {
+  margin-top: auto;
+}

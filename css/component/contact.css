@@ -1,0 +1,12 @@
+/*-------------------- c-contact --------------------*/
+.c-contact {
+  font-size: 26px;
+  font-style: normal;
+  line-height: 1;
+  text-align: right;
+}
+.c-contact__description {
+  margin-bottom: 5px;
+  font-size: 11px;
+  color: #9a9a9a;
+}

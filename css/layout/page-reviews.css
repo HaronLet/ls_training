@@ -1,0 +1,42 @@
+/*-------------------- page-reviews layout --------------------*/
+/*-------------------- reviews --------------------*/
+.l-reviews {
+  box-sizing: border-box;
+  padding: 100px 0 90px 0;
+}
+.l-reviews__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 46px;
+}
+.l-reviews__list {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(100% / 2 - 15px);
+}
+.l-reviews__item {
+  margin-bottom: 20px;
+}
+.l-reviews__pagination {
+  justify-content: center;
+  padding-left: 12px;
+}
+/*-------------------- banner --------------------*/
+.l-banner {
+  min-height: 360px;
+  box-sizing: border-box;
+  padding-top: 125px;
+  background: #fff url(../../img/bg/middleline.jpg) center center no-repeat;
+}
+.l-banner__title {
+  max-width: 600px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
+}
+/*-------------------- form --------------------*/
+.l-form {
+  background: #f4f5f5;
+  padding-bottom: 99px;
+}

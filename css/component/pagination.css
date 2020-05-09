@@ -1,0 +1,38 @@
+/*-------------------- c-pagination --------------------*/
+.c-pagination {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1;
+}
+.c-pagination__display {
+  margin-right: 25px;
+}
+.c-pagination__list {
+  display: flex;
+}
+.c-pagination__item:not(:last-child) {
+  margin-right: 2px;
+}
+.c-pagination__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding-top: 8px;
+  text-align: center;
+  font-weight: bold;
+  color: inherit;
+  transition: color .5s ease-out, background .5s ease-out;
+}
+.c-pagination__link:hover {
+  background: #fff;
+  color: #f5170e;
+}
+/*-------------------- c-pagination mod --------------------*/
+.c-pagination--theme--red .c-pagination__link:hover {
+  background: #f5170e;
+  color: #fff;
+}

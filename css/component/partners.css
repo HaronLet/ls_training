@@ -1,0 +1,30 @@
+/*-------------------- c-partners --------------------*/
+.c-partners__title {
+  margin-bottom: 80px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+}
+.c-partners__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.c-partners__item {
+  display: flex;
+  flex-grow: 1;
+  min-width: 230px;
+  max-width: 300px;
+  margin-bottom: 70px;
+  line-height: 0;
+}
+.c-partners__item:nth-child(4n) {
+  justify-content: flex-end;
+}
+.c-partners__link {
+  overflow: hidden;
+}
+.c-partners__logo {
+  width: auto;
+}

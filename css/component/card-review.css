@@ -1,0 +1,84 @@
+/*-------------------- c-card-review --------------------*/
+.c-card-review {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 50px 30px 38px 30px;
+  background: #f4f5f5;
+}
+.c-card-review__header {
+  display: flex;
+  margin-bottom: 25px;
+}
+.c-card-review__figure {
+  flex: 0 0 139px;
+  height: 139px;
+  border-radius: 50%;
+  margin-right: 23px;
+  overflow: hidden;
+  line-height: 0;
+}
+.c-card-review__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.c-card-review__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+.c-card-review__name {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 11px;
+}
+.c-card-review__name:hover {
+  color: #2e77a4;
+  text-decoration: underline;
+}
+.c-card-review__name::after {
+  content: url(../../img/icons/socials/vk-blue.png);
+  position: absolute;
+  top: 3px;
+  right: -37px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.c-card-review__tag {
+  display: inline-block;
+  border-radius: 17px;
+  box-sizing: border-box;
+  padding: 11px 16px;
+  background: #b9eae4;
+  font-size: 13px;
+  line-height: 1;
+}
+.c-card-review__body {
+  box-sizing: border-box;
+  margin-bottom: 45px;
+  padding-left: 2px;
+}
+.c-card-review__title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+}
+.c-card-review__body > p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #818181;
+  color: #000;
+}
+.c-card-review__footer {
+  margin-top: auto;
+}

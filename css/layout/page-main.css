@@ -1,0 +1,80 @@
+/*-------------------- page-main layout --------------------*/
+.page-main__wrapper {
+  background: url(./../../img/bg/hero.jpg) center top no-repeat, url(./../../img/bg/bottom-pic.jpg) center bottom 165px no-repeat, #001821;
+}
+/*-------------------- header --------------------*/
+.page-main__header {
+  color: #fff;
+  margin-bottom: 145px;
+}
+/*-------------------- hero --------------------*/
+.l-hero {
+  margin-bottom: 248px;
+  color: #fff;
+}
+.l-hero__title {
+  max-width: calc(510 * 100% / 1140);
+  line-height: 1.2;
+  margin-bottom: 26px;
+}
+.l-hero__subtitle {
+  max-width: 510px;
+  margin-bottom: 35px;
+}
+/*-------------------- offers --------------------*/
+.l-offers {
+  margin-bottom: 141px;  
+}
+.l-offers__title {
+  margin-bottom: 48px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}
+.l-offers__title::after {
+  content: url(./../../img/icons/flame.png);
+  margin-left: 6px;
+}
+.l-offers__list {
+  display: flex;
+  justify-content: space-between;
+}
+.l-offers__item {
+  width: calc(100% / 3 - 20px);
+}
+/*-------------------- news --------------------*/
+.l-news {
+  margin-bottom: 150px;
+  color: #fff;
+}
+.l-news__title {
+  margin-bottom: 47px;
+  font-size: 36px;
+  font-weight: bold;
+}
+.l-news__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 51px;
+}
+.l-news__item {
+  width: calc(100% / 2 - 15px);
+}
+.l-news__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.l-news__pagination {
+  justify-content: center;
+  padding-left: 12px;
+}
+/*-------------------- about --------------------*/
+.l-about {
+  margin-bottom: 44px;
+}
+/*-------------------- footer --------------------*/
+.page-main__footer .l-footer {
+  border-top: 1px solid #1a3038;
+  color: #fff;
+}

@@ -1,0 +1,27 @@
+/*-------------------- c-social --------------------*/
+.c-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.c-social__item {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+.c-social__item:last-child {
+  margin-right: 0;
+}
+.c-social__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: .5;
+  transition: opacity .5s ease-out;
+}
+.c-social__link:hover {
+  opacity: 1;
+}

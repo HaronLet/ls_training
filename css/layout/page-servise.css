@@ -1,0 +1,22 @@
+/*-------------------- page-servise layout --------------------*/
+/*-------------------- service --------------------*/
+.l-service {
+  padding: 100px 0 90px 0;
+  background: #fff;
+}
+.l-service__list {
+  margin-bottom: 67px;
+}
+.l-service__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+.l-service__pagination {
+  justify-content: center;
+  padding-left: 12px;
+}
+/*-------------------- partners --------------------*/
+.l-partners {
+  background: #f4f5f5;
+  box-sizing: border-box;
+  padding: 84px 0 46px 0;
+}

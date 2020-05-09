@@ -1,0 +1,104 @@
+/*-------------------- c-form --------------------*/
+.c-form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 74px;
+}
+.c-form__title {
+  margin-bottom: 43px;
+  font-size: 48px;
+  font-weight: bold;
+}
+.c-form__contact {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.c-form__name,
+.c-form__link {
+  flex-basis: calc(100% / 2 - 15px);
+  height: 63px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  background: #fff;
+  font-size: 18px;
+  line-height: 1;
+}
+.c-form__textarea {
+  height: 232px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 28px;
+  padding: 28px;
+  background: #fff;
+  font-size: 18px;
+  resize: none;
+}
+.c-form__tags {
+  display: flex;
+  margin-bottom: 24px;
+}
+.c-form__tags-title {
+  flex: 0 0 calc(367 * 100% / 1140);
+  box-sizing: border-box;
+  padding-top: 4px;
+  font-size: 18px;
+}
+.c-form__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-form__item {
+  margin: 0 6px 9px 7px;
+}
+.c-form__label {
+  display: inline-block;
+  border-radius: 17px;
+  box-sizing: border-box;
+  padding: 11px 15px;
+  background: #e7e7e7;
+  font-size: 13px;
+  line-height: 1;
+  transition: background .5s ease-out;
+  cursor: pointer;
+}
+.c-form__checkbox {
+  display: none;
+}
+.c-form__checkbox:checked + .c-form__label {
+  background: #b9eae4;
+  transition: background .5s ease-out;
+}
+.c-form__button {
+  display: flex;
+  justify-content: flex-end;
+}
+.c-form__reset,
+.c-form__submit { 
+  min-width: 165px; 
+  border: none;
+  border-radius: 26px;
+  box-sizing: border-box;
+  padding: 19px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.c-form__reset {
+  background: #2b2b2b;
+  margin-right: 21px;
+  transition: background .5s ease-out;
+}
+.c-form__submit {
+  background: #f5170e;
+}
+.c-form__reset:hover {
+  background: #8e8e8e;
+  transition: background .5s ease-out;
+}

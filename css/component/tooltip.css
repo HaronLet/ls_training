@@ -1,0 +1,37 @@
+/*-------------------- c-tooltip --------------------*/
+.c-tooltip {
+  position: relative;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: right;
+}
+.c-tooltip__title {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.c-tooltip__body {
+  visibility: hidden;
+  position: absolute;
+  top: 26px;
+  right: 0px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 15px 15px 13px 15px;
+  background: #d6dada;
+  line-height: 1.6;
+  text-align: left;
+  color: #17191a;
+  transition: visibility .5s ease-out;
+}
+.c-tooltip__body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  right: 45px;
+  border: 11px solid transparent;
+  border-bottom: 9px solid #d6dada;
+}
+.c-tooltip__title:hover + .c-tooltip__body {
+  visibility: visible;
+}

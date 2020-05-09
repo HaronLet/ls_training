@@ -1,0 +1,16 @@
+/*-------------------- c-menu --------------------*/
+.c-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-menu__item {
+  box-sizing: border-box;
+  padding: 0 27px;
+}
+.c-menu__link {
+  transition: color .5s ease-out;
+}
+.c-menu__link:hover {
+  color: #f5170e;
+  transition: 1s ease-out;
+}

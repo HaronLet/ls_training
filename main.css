@@ -1,0 +1,26 @@
+/*-------------------- layout --------------------*/
+@import url(./css/layout/base.css);
+@import url(./css/layout/page-main.css);
+@import url(./css/layout/page-servise.css);
+@import url(./css/layout/page-reviews.css);
+/*-------------------- common component --------------------*/
+@import url(./css/component/logo.css);
+@import url(./css/component/menu.css);
+@import url(./css/component/contact.css);
+@import url(./css/component/tooltip.css);
+@import url(./css/component/page-title.css);
+@import url(./css/component/button.css);
+@import url(./css/component/pagination.css);
+@import url(./css/component/social.css);
+/*-------------------- main-page component --------------------*/
+@import url(./css/component/page-subtitle.css);
+@import url(./css/component/card-offer.css);
+@import url(./css/component/card-news.css);
+@import url(./css/component/about.css);
+/*-------------------- servise-page component --------------------*/
+@import url(./css/component/breadcrumb.css);
+@import url(./css/component/card-service.css);
+@import url(./css/component/partners.css);
+/*-------------------- reviews-page component --------------------*/
+@import url(./css/component/card-review.css);
+@import url(./css/component/form.css);

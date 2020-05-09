@@ -1,0 +1,21 @@
+/*-------------------- c-breadcrumb --------------------*/
+.c-breadcrumb__list {
+  display: flex;  
+}
+.c-breadcrumb__item:not(:first-child) {
+  margin-left: 4px;
+}
+.c-breadcrumb__item:not(:first-child)::before {
+  content: "/";
+}
+.c-breadcrumb__link {
+  text-decoration: underline;
+  color: inherit;
+}
+/*-------------------- c-breadcrumb mod --------------------*/
+.c-breadcrumb--theme--gray {
+  color: #9a9a9a;
+}
+.c-breadcrumb__link--activ {
+  font-weight: bold;
+}

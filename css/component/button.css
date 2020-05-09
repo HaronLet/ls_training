@@ -1,0 +1,32 @@
+/*-------------------- c-button --------------------*/
+.c-button {
+  display: inline-block;
+  border: 1px solid #fba29f;
+  border-radius: 26px;
+  box-sizing: border-box;
+  padding: 18px 38px 18px 38px;
+  background: #fff;
+  font-weight: bold;
+  line-height: 1;
+  color: #f4160e;
+  text-transform: uppercase;
+  transition: color .5s ease-out, background .5s ease-out;
+}
+.c-button:hover {
+  border-color: #f5170e;
+  background: #f5170e;
+  color: #fff;
+}
+/*-------------------- c-button mod --------------------*/
+.c-button--theme--red {
+  border-color: #da0100;
+  background: #da0100;
+  color: #fff;
+}
+.c-button--theme--red:hover {
+  border-color: #f5170e;
+  background: #f5170e;
+}
+.c-button--size--small {
+  padding: 18px 28px 18px 28px;
+}
