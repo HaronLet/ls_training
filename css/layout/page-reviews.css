@@ -26,7 +26,7 @@
   min-height: 360px;
   box-sizing: border-box;
   padding-top: 125px;
-  background: #fff url(../../img/bg/middleline.jpg) center center no-repeat;
+  background: url(../../img/decor/couple.png) right 29.3% bottom no-repeat, url(../../img/bg/middleline.jpg) center center no-repeat #fff;
 }
 .l-banner__title {
   max-width: 600px;
