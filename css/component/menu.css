@@ -14,3 +14,8 @@
   color: #f5170e;
   transition: 1s ease-out;
 }
+/*-------------------- c-menu mod --------------------*/
+.c-menu__link--activ {
+  color: #f5170e;
+  transition: 1s ease-out;
+}
