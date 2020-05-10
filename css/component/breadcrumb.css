@@ -1,5 +1,5 @@
 /*-------------------- c-breadcrumb --------------------*/
-.c-breadcrumb__list {
+.c-breadcrumb {
   display: flex;  
 }
 .c-breadcrumb__item:not(:first-child) {

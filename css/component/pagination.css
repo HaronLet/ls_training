@@ -27,11 +27,19 @@
   color: inherit;
   transition: color .5s ease-out, background .5s ease-out;
 }
+.c-pagination__link--activ {
+  background: #fff;
+  color: #f5170e;
+}
 .c-pagination__link:hover {
   background: #fff;
   color: #f5170e;
 }
 /*-------------------- c-pagination mod --------------------*/
+.c-pagination--theme--red .c-pagination__link--activ {
+  background: #f5170e;
+  color: #fff;
+}
 .c-pagination--theme--red .c-pagination__link:hover {
   background: #f5170e;
   color: #fff;

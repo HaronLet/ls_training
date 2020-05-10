@@ -24,6 +24,12 @@
 }
 .c-partners__link {
   overflow: hidden;
+  filter: grayscale(100%);
+  transition: filter .5s ease-out;
+}
+.c-partners__link:hover {
+  filter: grayscale(0);
+  transition: filter .5s ease-out;
 }
 .c-partners__logo {
   width: auto;

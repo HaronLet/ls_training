@@ -4,7 +4,7 @@
   overflow: hidden;
   background: #fff;
 }
-.c-card-service__figure {
+.c-card-service__pic-box {
   max-width: calc(458 * 100% / 1140);
   margin-right: calc(58 * 100% / 1140);
   border-radius: 6px;
