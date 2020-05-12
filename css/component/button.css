@@ -16,6 +16,7 @@
   border-color: #f5170e;
   background: #f5170e;
   color: #fff;
+  transition: color .5s ease-out, background .5s ease-out;
 }
 /*-------------------- c-button mod --------------------*/
 .c-button--theme--red {
@@ -29,4 +30,15 @@
 }
 .c-button--size--small {
   padding: 18px 28px 18px 28px;
+}
+.c-button--size--big {
+  padding: 18px 56px 18px 56px;
+}
+.c-button--theme--red-shadow {
+  border-color: #f5170e;
+  background: #f5170e;
+  color: #fff;
+}
+.c-button--theme--red-shadow:hover {
+  box-shadow: 0 0 40px 25px rgba(245, 23, 14, 0.15);
 }

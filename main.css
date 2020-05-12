@@ -1,9 +1,11 @@
 /*-------------------- layout --------------------*/
 @import url(./css/layout/base.css);
+@import url(./css/layout/page-welcome.css);
 @import url(./css/layout/page-main.css);
 @import url(./css/layout/page-servise.css);
 @import url(./css/layout/page-reviews.css);
 /*-------------------- common component --------------------*/
+@import url(./css/component/welcome.css);
 @import url(./css/component/logo.css);
 @import url(./css/component/menu.css);
 @import url(./css/component/contact.css);

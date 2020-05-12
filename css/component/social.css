@@ -25,3 +25,20 @@
 .c-social__link:hover {
   opacity: 1;
 }
+/*-------------------- c-social mod --------------------*/
+.c-social__link--fb {
+  width: 36px; height: 36px;
+  background: url(../../img/icons/socials/social-icon-sprites.png) -10px -10px;
+}
+.c-social__link--tg {
+  width: 36px; height: 36px;
+  background: url(../../img/icons/socials/social-icon-sprites.png) -66px -10px;
+}
+.c-social__link--ig {
+  width: 36px; height: 36px;
+  background: url(../../img/icons/socials/social-icon-sprites.png) -10px -66px;
+}
+.c-social__link--vk {
+  width: 36px; height: 36px;
+  background: url(../../img/icons/socials/social-icon-sprites.png) -66px -66px;
+}

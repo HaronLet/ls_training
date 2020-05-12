@@ -1,0 +1,41 @@
+/*-------------------- c-welcom --------------------*/
+.c-welcome {
+  text-align: center;
+  animation: welcom 1s linear;
+}
+.c-welcome__title {
+  max-width: 279px;
+  margin-bottom: 2px;
+  line-height: 0;
+  overflow: hidden;
+}
+.c-welcome__picture {
+  width: 100%;
+  object-fit: cover;
+}
+.welcome__subtitle {
+  margin-bottom: 57px;
+  font-size: 18px;
+  color: #fff;
+}
+@keyframes welcom {
+  from {
+    opacity: 0;
+    transform: scale(.5, .5);
+  }
+  12.5% {
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.2, 1.2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  75% {
+    transform: scale(1.2, 1.2);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}

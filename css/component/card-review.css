@@ -38,10 +38,12 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 11px;
+  transition: color .3s ease-out;
 }
 .c-card-review__name:hover {
   color: #2e77a4;
   text-decoration: underline;
+  transition: color .3s ease-out;
 }
 .c-card-review__name::after {
   content: url(../../img/icons/socials/vk-blue.png);
