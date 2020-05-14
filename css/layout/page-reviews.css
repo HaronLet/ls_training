@@ -4,15 +4,10 @@
   box-sizing: border-box;
   padding: 100px 0 90px 0;
 }
-.l-reviews__wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 46px;
-}
 .l-reviews__list {
-  display: flex;
-  flex-direction: column;
-  flex-basis: calc(100% / 2 - 15px);
+  margin-bottom: 46px;
+  column-count: 2;
+  column-gap: 30px;
 }
 .l-reviews__item {
   margin-bottom: 20px;
@@ -25,8 +20,12 @@
 .l-banner {
   min-height: 360px;
   box-sizing: border-box;
-  padding-top: 125px;
   background: url(../../img/decor/couple.png) right 29.3% bottom no-repeat, url(../../img/bg/middleline.jpg) center center no-repeat #fff;
+}
+.l-banner__container {
+  display: flex;
+  align-items: center;
+  min-height: 360px;
 }
 .l-banner__title {
   max-width: 600px;

@@ -1,6 +1,6 @@
 /*-------------------- c-card-review --------------------*/
 .c-card-review {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   border-radius: 4px;
   overflow: hidden;

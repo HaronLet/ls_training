@@ -22,7 +22,7 @@
   text-align: left;
   color: #17191a;
   opacity: 0;
-  transition: opacity .3s ease-out;
+  transition: .3s ease-out;
 }
 .c-tooltip__body::after {
   content: "";
@@ -43,10 +43,11 @@
   border-top-width: 0;
   border-bottom: 9px solid #d6dada;
 }
-.c-tooltip:hover > .c-tooltip__body {
+.c-tooltip__title:hover + .c-tooltip__body,
+.c-tooltip__body:hover {
   visibility: visible;
   top: 26px;
   right: 0px;
   opacity: 1;
-  transition: opacity .3s ease-out;
+  transition: .3s ease-out;
 }
