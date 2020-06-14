@@ -1,0 +1,14 @@
+/*-------------------- block properties --------------------*/
+.properties {
+  display: flex;
+  align-items: center;
+  max-width: 490px;
+}
+.properties__item {
+  display: flex;
+  max-width: 155px;
+}
+.properties__image-box {
+  width: 44px;
+  height: 44px;
+}
