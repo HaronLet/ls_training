@@ -1,3 +1,232 @@
-.menu {
-  color: red; }
+/*-------------------- base --------------------*/
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Play', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+* {
+  box-sizing: border-box; }
+
+ul, figure {
+  margin: 0px;
+  padding: 0px; }
+
+img {
+  width: 100%; }
+
+ul > li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: normal; }
+
+b {
+  font-weight: bold; }
+
+address {
+  font-style: normal; }
+
+/*-------------------- base layout --------------------*/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%; }
+
+.container {
+  max-width: 940px;
+  margin: 0 auto; }
+
+/*-------------------- layout header --------------------*/
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 81px;
+  padding-top: 23px; }
+
+.header__menu {
+  margin-left: 25px; }
+
+.header__contact {
+  flex-grow: 1;
+  text-align: right; }
+
+.btn-menu {
+  display: none; }
+
+/*-------------------- layout hero --------------------*/
+.hero {
+  height: 100vh;
+  background: #f5f5f5; }
+
+.hero__container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between; }
+
+.hero__image-box {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin-left: -30px;
+  padding: 10px;
+  background: #fff;
+  overflow: hidden; }
+
+.hero__title {
+  margin-bottom: 19px;
+  max-width: 405px;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase; }
+
+.hero__subtitle {
+  margin-bottom: 37px;
+  max-width: 325px;
+  font-size: 1.125em; }
+
+.hero__button {
+  margin-bottom: 90px; }
+
+/*-------------------- layout advantages --------------------*/
+.advantages {
+  height: 100vh;
+  background: #fff; }
+
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px; }
+
+.advantages__title {
+  margin-bottom: 11px;
+  max-width: 580px;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase; }
+
+.advantages__subtitle {
+  margin-bottom: 37px;
+  max-width: 575px;
+  font-size: 1.125em;
+  line-height: 1.2;
+  text-align: center;
+  color: #666; }
+
+.advantages__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.advantages__item {
+  position: relative;
+  flex-basis: calc(100% / 3); }
+  .advantages__item:not(:nth-child(3n)):not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    display: block;
+    width: 67px;
+    height: 21px;
+    background: url(../img/bg/break.png);
+    transform: translate(-50%, -50%); }
+
+.logo {
+  display: block;
+  width: 42px;
+  height: 42px; }
+
+/*-------------------- menu --------------------*/
+.menu__list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.menu__item {
+  padding: 0 13px; }
+
+.menu__link {
+  transition: color .3s ease-out; }
+  .menu__link:hover {
+    color: #e01f3d;
+    transition: .3s ease-out; }
+
+/*-------------------- block contact --------------------*/
+.contact__phone {
+  position: relative;
+  font-size: 1.3125em;
+  line-height: 1; }
+  .contact__phone::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: -15px;
+    width: 12px;
+    height: 11px;
+    background: url(../img/icons/phone.svg) no-repeat center center/contain; }
+
+/*-------------------- block button --------------------*/
+.button {
+  display: inline-block;
+  border: 1px solid #e01f3d;
+  border-radius: 26px;
+  padding: 18px 40px;
+  background: #e01f3d;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+  transition: .3s ease-out;
+  /*-------------------- button mod --------------------*/ }
+  .button:hover {
+    border-color: #ca1b36;
+    background: #ca1b36;
+    transition: .3s ease-out; }
+
+/*-------------------- block properties --------------------*/
+.properties {
+  display: flex;
+  align-items: center;
+  max-width: 490px; }
+
+.properties__item {
+  display: flex;
+  max-width: 155px; }
+
+.properties__image-box {
+  width: 44px;
+  height: 44px; }
+
+/*-------------------- block advantages --------------------*/
+.advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.advantage__imege-box {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  padding: 32px;
+  background: #f5f5f5; }
+
 /*# sourceMappingURL=main.css.map */

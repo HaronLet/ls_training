@@ -1,0 +1,13 @@
+/*-------------------- block advantages --------------------*/
+.advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advantage__imege-box {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  padding: 32px;
+  background: $base-color-primary;
+}

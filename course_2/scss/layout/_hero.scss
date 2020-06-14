@@ -1,0 +1,36 @@
+/*-------------------- layout hero --------------------*/
+.hero {
+  height: 100vh;
+  background: $base-color-primary;
+}
+.hero__container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.hero__image-box {
+  // flex: 1 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin-left: -30px;
+  padding: 10px;
+  background: $text-color-white;
+  overflow: hidden;
+}
+.hero__title {
+  margin-bottom: 19px;
+  max-width: 405px;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.hero__subtitle {
+  margin-bottom: 37px;
+  max-width: 325px;
+  font-size: 1.125em;
+}
+.hero__button {
+  margin-bottom: 90px;
+}

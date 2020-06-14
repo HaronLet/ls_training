@@ -1,0 +1,22 @@
+/*-------------------- block button --------------------*/
+.button {
+  display: inline-block;
+  border: 1px solid $base-color-secondary;
+  border-radius: 26px;
+  padding: 18px 40px;
+  background: $base-color-secondary;
+  font-weight: bold;
+  line-height: 1;
+  color: $text-color-white;
+  text-transform: uppercase;
+  transition: .3s ease-out;
+
+  &:hover {
+    border-color: $btn-color-hover;
+    background: $btn-color-hover;
+    transition: .3s ease-out;
+  }
+
+  /*-------------------- button mod --------------------*/
+
+}

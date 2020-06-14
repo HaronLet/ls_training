@@ -1,0 +1,48 @@
+/*-------------------- layout advantages --------------------*/
+.advantages {
+  height: 100vh;
+  background: $text-color-white;
+}
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+.advantages__title {
+  margin-bottom: 11px;
+  max-width: 580px;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.advantages__subtitle {
+  margin-bottom: 37px;
+  max-width: 575px;
+  font-size: 1.125em;
+  line-height: 1.2;
+  text-align: center;
+  color: $text-color-secondary;
+}
+.advantages__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.advantages__item {
+  position: relative;
+  flex-basis: calc(100% / 3);
+
+  &:not(:nth-child(3n)):not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    display: block;
+    width: 67px;
+    height: 21px;
+    background: url(../img/bg/break.png);
+    transform: translate(-50%, -50%);
+  }
+}
