@@ -18,7 +18,7 @@
   text-transform: uppercase;
 }
 .advantages__subtitle {
-  margin-bottom: 37px;
+  margin-bottom: 57px;
   max-width: 575px;
   font-size: 1.125em;
   line-height: 1.2;
@@ -32,12 +32,16 @@
 }
 .advantages__item {
   position: relative;
-  flex-basis: calc(100% / 3);
+  flex-basis: calc(100% / 3 - 9px);
+
+  &:not(:nth-child(3n)):not(:last-child) {
+    margin-right: 13px;
+  }
 
   &:not(:nth-child(3n)):not(:last-child)::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 22%;
     left: 100%;
     display: block;
     width: 67px;

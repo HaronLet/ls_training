@@ -1,0 +1,12 @@
+/*-------------------- layout reviews --------------------*/
+.reviews {
+  height: 100vh;
+  background: $base-color-primary;
+}
+.reviews__title {
+  margin-bottom: 11px;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
