@@ -177,10 +177,11 @@
     <section class="reviews">
       <div class="container">
         <h2 class="reviews__title">Отзывы</h2>
+
         <ul class="reviews__list">
           <li class="rewievs__item review">
             <div class="review__avatar-box">
-              <img src="../img/content/service/waterfall.jpg" alt="Фото" class="review__avatar">
+              <img src="./img/users/419-billie-hp-feature-left.png.large.1x.jpg" alt="Фото" class="review__avatar">
             </div>
     
             <div class="review__content">
@@ -192,6 +193,18 @@
               <div class="review__author-name">Билли Айлиш</div>
     
             </div>
+          </li>
+        </ul>
+
+        <ul class="reviews__user users">
+          <li class="users__item users__item--activ">
+            <img src="./img/users/419-billie-hp-feature-left.png.large.1x.jpg" alt="фото" class="users__avatar">
+          </li>
+          <li class="users__item">
+            <img src="./img/users/photo.jpg" alt="фото" class="users__avatar">
+          </li>
+          <li class="users__item">
+            <img src="./img/users/photo-1468546818829-25bb337b6646.jpg" alt="фото" class="users__avatar">
           </li>
         </ul>
       </div>
@@ -208,24 +221,24 @@
 
         <h2 class="form__title">Закажите доставку</h2>
 
-        <div class="form__container">
+        <form class="form__container">
           <div class="form__group">
             <div class="form__row">
           
-              <label for="" class="form__label">
+              <label class="form__label">
                 <span class="form__title-label">Имя</span>
                 <input class="form__input" type="text">
               </label>
           
-              <label for="" class="form__label">
+              <label class="form__label">
                 <span class="form__title-label">Телефон</span>
-                <input class="form__input" type="tel">
+                <input class="form__input" type="tel" placeholder="8 (902)-234-8912">
               </label>
           
             </div>
           
             <div class="form__row">
-              <label for="" class="form__label">
+              <label class="form__label">
                 <span class="form__title-label">Улица</span>
                 <input class="form__input" type="text">
               </label>
@@ -233,22 +246,22 @@
           
             <div class="form__row">
           
-              <label for="" class="form__label">
+              <label class="form__label">
                 <span class="form__title-label">Дом</span>
                 <input class="form__input" type="text">
               </label>
               
-              <label for="" class="form__label">
+              <label class="form__label">
                 <span class="form__title-label">Корпус</span>
                 <input class="form__input" type="text">
               </label>
               
-              <label for="" class="form__label">
+              <label class="form__label">
                 <span class="form__title-label">Квартира</span>
                 <input class="form__input" type="number">
               </label>
               
-              <label for="" class="form__label">
+              <label class="form__label">
                 <span class="form__title-label">Этаж</span>
                 <input class="form__input" type="number">
               </label>
@@ -258,28 +271,36 @@
           
           <div class="form__group">
           
-            <label for="" class="form__label">
-              <span class="form__title-label">Комментарий</span>
-              <textarea class="form__textarea"></textarea>
-            </label>
+            <div class="form__row">
+              <label class="form__label">
+                <span class="form__title-label">Комментарий</span>
+                <textarea class="form__textarea"></textarea>
+              </label>
+            </div>
           
-            <label for="" class="form__label">
-              <span class="form__title-label">Потребуется сдача</span>
-              <input class="form__radio" type="radio" name="payment">
-            </label>
-          
-            <label for="" class="form__label">
-              <span class="form__title-label">Оплата по карте</span>
-              <input class="form__radio" type="radio" name="payment">
-            </label>
-          
-            <label for="" class="form__label">
-              <span class="form__title-label">Не перезванивать</span>
-              <input class="form__checkbox" type="checkbox">
-            </label>
-          </div>
-        </div>
+            <div class="form__row form__row--wrap">
+              <label class="form__label">
+                <input class="form__radio" type="radio" name="payment" checked>
+                <span class="form__title-label">Потребуется сдача</span>
+              </label>
+              
+              <label class="form__label">
+                <input class="form__radio" type="radio" name="payment">
+                <span class="form__title-label">Оплата по карте</span>
+              </label>
 
+              <label class="form__label">
+                <input class="form__checkbox" type="checkbox">
+                <span class="form__title-label">Не перезванивать</span>
+              </label>
+            </div>
+
+            <div class="form__row form__row--button">
+              <input class="form__submit button" type="submit" value="Заказать">
+              <input class="form__reset" type="reset" value="Очистить">
+            </div>
+          </div>
+        </form>
       </div>
     </section>
     
@@ -318,7 +339,7 @@
     <div class="radio-menu">
       <ul class="radio-menu__list">
         <li class="radio-menu__item">
-          <a href="#" class="radio-menu__link"></a>
+          <a href="#" class="radio-menu__link radio-menu__link--activ"></a>
         </li>
         <li class="radio-menu__item">
           <a href="#" class="radio-menu__link"></a>

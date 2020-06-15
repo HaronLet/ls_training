@@ -6,9 +6,12 @@
 }
 .properties__item {
   display: flex;
-  max-width: 155px;
+  flex-basis: 155px;
 }
 .properties__image-box {
-  width: 44px;
+  flex: 1 0 44px;
   height: 44px;
+}
+.properties__description {
+  margin-left: 8px;
 }

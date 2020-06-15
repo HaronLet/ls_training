@@ -1,0 +1,36 @@
+.radio-menu {
+  position: fixed;
+  top: 242px;
+  right: 47px;
+}
+.radio-menu__item {
+  margin-bottom: 5px;
+}
+.radio-menu__link {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #999;
+  }
+
+  &--activ {
+    border-color: #e42424;
+  }
+
+  &--activ::before {
+    background: #e42424;
+  }
+}

@@ -1,0 +1,45 @@
+/*-------------------- block review --------------------*/
+.review {
+  position: relative;
+  display: flex;
+  padding: 51px 95px 34px 45px ;
+  background: $base-color-primary;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -65px;
+    right: 50%;
+    transform: translate(50%, 0);
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+.review__avatar-box {
+  flex: 1 0 254px;
+  height: 260px;
+}
+.review__content {
+  margin-left: 20px;
+  padding-top: 8px;
+  font-size: 18px;
+
+  & p {
+    margin-bottom: 27px;
+    line-height: 1.21;
+    color: #666;
+  }
+}
+.review__title {
+  margin-bottom: 24px;
+  font-size: 27px;
+  font-weight: bold;
+}
+.review__author-name {
+  font-size: 18px;
+  font-weight: bold;
+}
