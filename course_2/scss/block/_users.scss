@@ -9,8 +9,15 @@
   border: 6px solid transparent;
   border-radius: 50%;
   overflow: hidden;
+  transition: .3s ease-out;
+  cursor: pointer;
 
   &--activ {
     border: 6px solid #e01f3d;
+  }
+
+  &:hover {
+    border: 6px solid #e01f3d;
+    transition: .3s ease-out;
   }
 }

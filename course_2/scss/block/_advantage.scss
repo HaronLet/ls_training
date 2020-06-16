@@ -13,15 +13,20 @@
   padding: 32px;
   background: $base-color-primary;
 }
-.advantage__title {
-  margin-bottom: 13px;
-  font-size: 1.5em;
-  font-weight: bold;  
-}
 .advantage__content {
   
   & p {
     line-height: 1.2;
     color: $text-color-secondary;
+  }
+
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    margin-bottom: 13px;
+    font-size: 1.5em;
+    font-weight: bold;  
   }
 }

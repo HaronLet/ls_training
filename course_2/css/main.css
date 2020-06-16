@@ -73,17 +73,16 @@ address {
 .hero {
   height: 100vh;
   background: #f5f5f5; }
-
-.hero__container {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between; }
+  .hero .container {
+    position: relative; }
 
 .hero__image-box {
-  width: 500px;
-  height: 500px;
+  position: absolute;
+  top: 17.5%;
+  right: 1.6%;
+  max-width: 500px;
+  max-height: 500px;
   border-radius: 50%;
-  margin-left: -30px;
   padding: 10px;
   background: #fff;
   overflow: hidden; }
@@ -102,7 +101,7 @@ address {
   font-size: 1.125em; }
 
 .hero__button {
-  margin-bottom: 90px; }
+  margin-bottom: 92px; }
 
 /*-------------------- layout advantages --------------------*/
 .advantages {
@@ -167,6 +166,11 @@ address {
 
 .reviews__list {
   margin-bottom: 22px; }
+
+.rewievs__item {
+  display: none; }
+  .rewievs__item--activ {
+    display: flex; }
 
 /*-------------------- layout form --------------------*/
 .form {
@@ -327,7 +331,8 @@ address {
   width: 16px;
   height: 16px;
   border: 1px solid transparent;
-  border-radius: 50%; }
+  border-radius: 50%;
+  transition: .3s ease-out; }
   .radio-menu__link::before {
     content: "";
     position: absolute;
@@ -342,6 +347,12 @@ address {
     border-color: #e42424; }
   .radio-menu__link--activ::before {
     background: #e42424; }
+  .radio-menu__link:hover {
+    border-color: #e42424;
+    transition: .3s ease-out; }
+  .radio-menu__link:hover::before {
+    background: #e42424;
+    transition: .3s ease-out; }
 
 .logo {
   display: block;
@@ -398,12 +409,13 @@ address {
 /*-------------------- block properties --------------------*/
 .properties {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  max-width: 490px; }
+  max-width: 500px; }
 
 .properties__item {
   display: flex;
-  flex-basis: 155px; }
+  flex-basis: 145px; }
 
 .properties__image-box {
   flex: 1 0 44px;
@@ -427,19 +439,17 @@ address {
   padding: 32px;
   background: #f5f5f5; }
 
-.advantage__title {
+.advantage__content p {
+  line-height: 1.2;
+  color: #666; }
+.advantage__content h2, .advantage__content h3, .advantage__content h4, .advantage__content h5, .advantage__content h6 {
   margin-bottom: 13px;
   font-size: 1.5em;
   font-weight: bold; }
 
-.advantage__content p {
-  line-height: 1.2;
-  color: #666; }
-
 /*-------------------- block review --------------------*/
 .review {
   position: relative;
-  display: flex;
   padding: 51px 95px 34px 45px;
   background: #f5f5f5;
   overflow: hidden; }
@@ -467,11 +477,10 @@ address {
     margin-bottom: 27px;
     line-height: 1.21;
     color: #666; }
-
-.review__title {
-  margin-bottom: 24px;
-  font-size: 27px;
-  font-weight: bold; }
+  .review__content h3 {
+    margin-bottom: 24px;
+    font-size: 27px;
+    font-weight: bold; }
 
 .review__author-name {
   font-size: 18px;
@@ -487,8 +496,13 @@ address {
   height: 80px;
   border: 6px solid transparent;
   border-radius: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: .3s ease-out;
+  cursor: pointer; }
   .users__item--activ {
     border: 6px solid #e01f3d; }
+  .users__item:hover {
+    border: 6px solid #e01f3d;
+    transition: .3s ease-out; }
 
 /*# sourceMappingURL=main.css.map */

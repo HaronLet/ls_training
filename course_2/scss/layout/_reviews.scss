@@ -14,3 +14,10 @@
 .reviews__list {
   margin-bottom: 22px;
 }
+.rewievs__item {
+  display: none;
+
+  &--activ {
+    display: flex;
+  }
+}

@@ -1,12 +1,13 @@
 /*-------------------- block properties --------------------*/
 .properties {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  max-width: 490px;
+  max-width: 500px;
 }
 .properties__item {
   display: flex;
-  flex-basis: 155px;
+  flex-basis: 145px;  
 }
 .properties__image-box {
   flex: 1 0 44px;
