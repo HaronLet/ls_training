@@ -5,14 +5,9 @@
 
   & .container {
     position: relative;
+    height: 100%;
   }
 }
-// .hero__container {
-//   display: flex;
-//   flex-direction: row-reverse;
-//   justify-content: space-between;
-//   align-items: center;
-// }
 .hero__image-box {
   position: absolute;
   top: 17.5%;
@@ -23,6 +18,12 @@
   padding: 10px;
   background: $text-color-white;
   overflow: hidden;
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
 }
 .hero__title {
   margin-bottom: 19px;
@@ -39,4 +40,7 @@
 }
 .hero__button {
   margin-bottom: 92px;
+}
+.hero__properties {
+  flex: 1 0;
 }

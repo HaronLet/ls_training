@@ -74,7 +74,8 @@ address {
   height: 100vh;
   background: #f5f5f5; }
   .hero .container {
-    position: relative; }
+    position: relative;
+    height: 100%; }
 
 .hero__image-box {
   position: absolute;
@@ -86,6 +87,12 @@ address {
   padding: 10px;
   background: #fff;
   overflow: hidden; }
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%; }
 
 .hero__title {
   margin-bottom: 19px;
@@ -102,6 +109,9 @@ address {
 
 .hero__button {
   margin-bottom: 92px; }
+
+.hero__properties {
+  flex: 1 0; }
 
 /*-------------------- layout advantages --------------------*/
 .advantages {
@@ -410,8 +420,8 @@ address {
 .properties {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  max-width: 500px; }
+  max-width: 500px;
+  align-items: flex-end; }
 
 .properties__item {
   display: flex;

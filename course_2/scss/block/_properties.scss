@@ -2,8 +2,8 @@
 .properties {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   max-width: 500px;
+  align-items: flex-end;
 }
 .properties__item {
   display: flex;
