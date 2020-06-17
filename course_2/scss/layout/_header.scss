@@ -1,0 +1,17 @@
+/*-------------------- layout header --------------------*/
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 81px;
+  padding-top: 23px;
+}
+.header__menu {
+  margin-left: 25px;
+}
+.header__contact{
+  flex-grow: 1;
+  text-align: right;
+}
+.btn-menu {
+  display: none;
+}

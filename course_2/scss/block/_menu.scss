@@ -1,0 +1,16 @@
+/*-------------------- menu --------------------*/
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu__item {
+  padding: 0 13px;
+}
+.menu__link {
+  transition: color .3s ease-out;
+
+  &:hover {
+    color: $base-color-secondary;
+    transition: .3s ease-out;
+  }
+}

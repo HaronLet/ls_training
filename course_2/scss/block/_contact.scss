@@ -1,0 +1,17 @@
+/*-------------------- block contact --------------------*/
+.contact__phone {
+  position: relative;
+  font-size: 1.3125em;
+  line-height: 1;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: -15px;
+    width: 12px;
+    height: 11px;
+    background: url(../img/icons/phone.svg) no-repeat center center/contain;
+  }
+}

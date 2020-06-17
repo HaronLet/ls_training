@@ -1,0 +1,23 @@
+/*-------------------- layout reviews --------------------*/
+.reviews {
+  height: 100vh;
+  padding-top: 55px;
+}
+.reviews__title {
+  margin-bottom: 32px;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+.reviews__list {
+  margin-bottom: 22px;
+}
+.rewievs__item {
+  display: none;
+
+  &--activ {
+    display: flex;
+  }
+}
