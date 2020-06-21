@@ -5,20 +5,36 @@
   align-items: center;
 }
 .social__item {
-  width: rem(36px);
 
   &:not(:last-child) {
     margin-right: rem(11px);
   }
 
-  &:hover {
-
-  }
   @include mobile {
-    width: rem(27px);
 
     &:not(:last-child) {
       margin-right: rem(8px);
     }
+  }
+}
+.social__link {
+  display: block;
+  width: rem(36px);
+  height: rem(36px);
+
+  @include mobile {
+    width: rem(27px);
+    height: rem(27px);
+  }
+}
+.social__icon {
+  width: 100%;
+  height: 100%;
+  fill: $grey-b2;
+  transition: .3s ease-out;
+
+  &:hover {
+    fill: $black-00;
+    transition: .3s ease-out;
   }
 }

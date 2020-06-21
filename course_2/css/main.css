@@ -142,6 +142,12 @@ a {
   position: relative;
   height: 100%;
 }
+@media screen and (max-width: 480px) {
+  .hero {
+    height: auto;
+    padding-bottom: 0.9375rem;
+  }
+}
 
 .hero__image-box {
   position: absolute;
@@ -239,6 +245,12 @@ a {
   display: block;
   width: 2.625rem;
   height: 2.625rem;
+}
+
+.logo__image {
+  width: 100%;
+  height: 100%;
+  fill: #e01f3d;
 }
 
 /*-------------------- menu --------------------*/
@@ -340,6 +352,11 @@ a {
   height: 2.75rem;
 }
 
+.properties__image {
+  width: 100%;
+  height: 100%;
+}
+
 .properties__description {
   margin-left: 0.5rem;
 }
@@ -347,6 +364,12 @@ a {
 /*-------------------- layout advantages --------------------*/
 .advantages {
   height: 100vh;
+}
+@media screen and (max-width: 480px) {
+  .advantages {
+    height: auto;
+    padding: 0.9375rem 0;
+  }
 }
 
 .advantages .container {
@@ -468,6 +491,11 @@ a {
   }
 }
 
+.advantage__image {
+  width: 100%;
+  height: 100%;
+}
+
 .advantage__content p {
   line-height: 1.2;
   color: #666;
@@ -490,6 +518,12 @@ a {
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+@media screen and (max-width: 480px) {
+  .reviews {
+    height: auto;
+    padding: 0.9375rem 0;
+  }
 }
 
 .reviews__title {
@@ -667,6 +701,12 @@ a {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .form {
+    height: auto;
+    padding: 0.9375rem 0;
+  }
 }
 
 .form__title {
@@ -933,19 +973,36 @@ a {
   align-items: center;
 }
 
-.social__item {
-  width: 2.25rem;
-}
 .social__item:not(:last-child) {
   margin-right: 0.6875rem;
 }
 @media screen and (max-width: 480px) {
-  .social__item {
-    width: 1.6875rem;
-  }
   .social__item:not(:last-child) {
     margin-right: 0.5rem;
   }
+}
+
+.social__link {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+@media screen and (max-width: 480px) {
+  .social__link {
+    width: 1.6875rem;
+    height: 1.6875rem;
+  }
+}
+
+.social__icon {
+  width: 100%;
+  height: 100%;
+  fill: #b2b2b2;
+  transition: .3s ease-out;
+}
+.social__icon:hover {
+  fill: #000;
+  transition: .3s ease-out;
 }
 
 /*-------------------- layout radio-menu --------------------*/

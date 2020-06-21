@@ -5,6 +5,11 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+
+  @include mobile {
+    height: auto;
+    padding: rem(15px) 0;
+  }
 }
 .reviews__title {
   margin-bottom: rem(32px);

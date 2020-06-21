@@ -9,6 +9,11 @@ $hero__image-box-bg-color: $white-ff;
     position: relative;
     height: 100%;
   }
+
+  @include mobile {
+    height: auto;
+    padding-bottom: rem(15px);
+  }
 }
 .hero__image-box {
   position: absolute;

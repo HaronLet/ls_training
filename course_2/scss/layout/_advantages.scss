@@ -3,6 +3,11 @@ $advantages__subtitle-color: $grey-66;
 /*-------------------- layout advantages --------------------*/
 .advantages {
   height: 100vh;
+
+  @include mobile {
+    height: auto;
+    padding: rem(15px) 0;
+  }
 }
 .advantages .container {
   display: flex;
