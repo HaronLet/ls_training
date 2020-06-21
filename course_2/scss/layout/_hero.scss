@@ -1,7 +1,9 @@
+$hero-bg-color: $white-f5;
+$hero__image-box-bg-color: $white-ff;
 /*-------------------- layout hero --------------------*/
 .hero {
   height: 100vh;
-  background: $base-color-primary;
+  background: $hero-bg-color;
 
   & .container {
     position: relative;
@@ -10,37 +12,79 @@
 }
 .hero__image-box {
   position: absolute;
-  top: 17.5%;
-  right: 1.6%;
-  max-width: 500px;
-  max-height: 500px;
+  top: 16.5%;
+  right: 8%;
+  max-width: rem(500px);
+  max-height: rem(500px);
   border-radius: 50%;
-  padding: 10px;
-  background: $text-color-white;
+  padding: rem(10px);
+  background: $hero__image-box-bg-color;
   overflow: hidden;
+
+  @include tablet {
+    position: static;
+    max-width: rem(348px);
+    max-height: rem(348px);
+    margin: 0 auto;
+    margin-bottom: rem(27px);
+  }
+
+  @include mobile {
+    max-width: rem(296px);
+    max-height: rem(296px);
+  }
 }
 .hero__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 70%;
+
+  @include tablet {
+    align-items: center;
+    height: auto;
+    text-align: center;
+  }
 }
 .hero__title {
-  margin-bottom: 19px;
-  max-width: 405px;
-  font-size: 3em;
+  max-width: rem(405px);
+  margin-bottom: rem(19px);
+  font-size: rem(48px);
   font-weight: bold;
   line-height: 1.2;
   text-transform: uppercase;
+
+  @include tablet {
+    max-width: 90%;
+    margin-bottom: rem(10px);
+  }
+
+  @include mobile {
+    max-width: 70%;
+    font-size: rem(36px);
+  }
 }
 .hero__subtitle {
-  margin-bottom: 37px;
-  max-width: 325px;
+  max-width: rem(325px);
+  margin-bottom: rem(37px);
   font-size: 1.125em;
+
+  @include tablet {
+    margin-bottom: rem(21px);
+  }
+
+  @include mobile {
+    max-width: 70%;
+    margin-bottom: rem(26px);
+  }
 }
 .hero__button {
-  margin-bottom: 92px;
+  margin-bottom: rem(92px);
 }
-.hero__properties {
+.hero .properties {
   flex: 1 0;
+  
+  @include tablet {
+    display: none;
+  }
 }

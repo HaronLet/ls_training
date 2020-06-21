@@ -2,16 +2,47 @@
 .header {
   display: flex;
   align-items: center;
-  margin-bottom: 81px;
-  padding-top: 23px;
+  margin-bottom: rem(81px);
+  padding-top: rem(23px);
+
+  & .logo {
+    flex-shrink: 0;
+  }
+
+  @include tablet {
+    justify-content: space-between;
+    margin-bottom: rem(125px);
+  }
+
+  @include mobile {
+    margin-bottom: rem(36px);
+  }
 }
 .header__menu {
-  margin-left: 25px;
+  margin-left: rem(25px);
+
+  @include tablet {
+    display: none;
+  }
 }
 .header__contact{
   flex-grow: 1;
   text-align: right;
+
+  @include tablet {
+    display: none;
+  }
 }
 .btn-menu {
+  width: rem(24px);
   display: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+
+  @include tablet {
+    display: block;
+  }
 }

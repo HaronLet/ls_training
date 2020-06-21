@@ -1,0 +1,24 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.social__item {
+  width: rem(36px);
+
+  &:not(:last-child) {
+    margin-right: rem(11px);
+  }
+
+  &:hover {
+
+  }
+  @include mobile {
+    width: rem(27px);
+
+    &:not(:last-child) {
+      margin-right: rem(8px);
+    }
+  }
+}

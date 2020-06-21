@@ -1,45 +1,97 @@
+$review-bg-color: $white-f5;
+$review-before-bg-color: $white-ff;
+$review__content-p-color: $grey-66;
+
 /*-------------------- block review --------------------*/
 .review {
   position: relative;
-  padding: 51px 95px 34px 45px ;
-  background: $base-color-primary;
+  padding: rem(51px) rem(95px) rem(34px) rem(45px) ;
+  background: $review-bg-color;
   overflow: hidden;
 
   &::before {
     content: "";
     position: absolute;
-    top: -65px;
+    top: rem(-65px);
     right: 50%;
     transform: translate(50%, 0);
     display: block;
-    width: 90px;
-    height: 90px;
+    width: rem(90px);
+    height: rem(90px);
     border-radius: 50%;
-    background: #fff;
+    background: $review-before-bg-color;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    padding: rem(53px) rem(20px) rem(35px);
+    text-align: center;
+  }
+
+  @include mobile {
+    padding: rem(58px) rem(38px) rem(55px);
   }
 }
 .review__avatar-box {
-  flex: 1 0 254px;
-  height: 260px;
+  flex: 1 0 rem(254px);
+  height: rem(260px);
+
+  @include tablet {
+    flex-basis: auto;
+    width: rem(131px);
+    height: rem(131px);
+    margin-bottom: rem(18px);
+  }
+
+  @include mobile {
+    width: rem(125px);
+    height: rem(125px);
+    margin-bottom: rem(13px);
+  }
 }
 .review__content {
-  margin-left: 20px;
-  padding-top: 8px;
-  font-size: 18px;
+  margin-left: rem(20px);
+  padding-top: rem(8px);
+  font-size: rem(18px);
 
   & p {
-    margin-bottom: 27px;
+    margin-bottom: rem(27px);
     line-height: 1.21;
-    color: #666;
+    color: $review__content-p-color;
   }
 
   & h3 {
-    margin-bottom: 24px;
-    font-size: 27px;
+    margin-bottom: rem(24px);
+    font-size: rem(27px);
     font-weight: bold;
+  }
+
+  @include tablet {
+    margin-left: 0;
+
+    & p {
+      margin-bottom: rem(19px);
+    }
+
+    & h3 {
+      margin-bottom: rem(14px);
+    }
+  }
+
+  @include mobile {
+    padding-top: 0;
+
+    & p {
+      margin-bottom: rem(19px);
+    }
+
+    & h3 {
+      margin-bottom: rem(12px);
+    }
   }
 }
 .review__author-name {
-  font-size: 18px;
+  font-size: rem(18px);
   font-weight: bold;
 }

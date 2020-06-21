@@ -1,24 +1,35 @@
+$body-text-color: $black-00;
 /*-------------------- base --------------------*/
-html {
-  height: 100%;
-}
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Play', Helvetica, sans-serif;
-  font-size: $base-font-size;
-  line-height: 1.42;
-  color: $text-color-black;  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 * {
   box-sizing: border-box;
 }
-ul, figure {
-  margin: 0px;
-  padding: 0px;
+html {
+  height: 100%;
+  font-size: $base-font-size;
+}
+body {
+  height: 100%;
+  font-family: $base-font-family;
+  line-height: 1.42;
+  color: $body-text-color;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body, 
+ul, 
+figure {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: normal;
+}
+b {
+  font-weight: bold;
+}
+address {
+  font-style: normal;
 }
 img {
   width: 100%;
@@ -31,16 +42,6 @@ a {
   cursor: pointer;
   color: inherit;
 }
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  font-weight: normal;
-}
-b {
-  font-weight: bold;
-}
-address {
-  font-style: normal;
-}
 /*-------------------- layout base --------------------*/
 .wrapper {
   display: flex;
@@ -49,6 +50,17 @@ address {
   min-height: 100%;
 }
 .container {
-  max-width: 940px;
+  max-width: $width-desktop;
   margin: 0 auto;
+  padding: 0 rem(80px);
+
+  @include tablet {
+    max-width: $width-tablet;
+    padding: 0 rem(24px);
+  }
+
+  @include mobile {
+    max-width: $width-mobile;
+    padding: 0 rem(10px);
+  }
 }

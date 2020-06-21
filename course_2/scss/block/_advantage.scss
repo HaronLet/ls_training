@@ -1,23 +1,47 @@
+$advetage-bg-color: $white-f5;
+$advetage-p-text-color: $grey-66;
+
 /*-------------------- block advantages --------------------*/
 .advantage {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 0 rem(15px);
+
+  @include tablet {
+    padding: 0 rem(5px);
+  }
+
+  @include mobile {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: start;
+ }
 }
 .advantage__imege-box {
-  width: 125px;
-  height: 125px;
+  width: rem(125px);
+  height: rem(125px);
   border-radius: 50%;
-  margin-bottom: 27px;
-  padding: 32px;
-  background: $base-color-primary;
+  margin-bottom: rem(27px);
+  padding: rem(32px);
+  background: $advetage-bg-color;
+
+  @include tablet {
+    margin-bottom: rem(22px);
+  }
+
+  @include mobile {
+    flex: 0 0 rem(125px);
+    margin-right: rem(15px);
+    margin-bottom: rem(40px);
+  }
 }
 .advantage__content {
   
   & p {
     line-height: 1.2;
-    color: $text-color-secondary;
+    color: $advetage-p-text-color;
   }
 
   & h2,
@@ -25,8 +49,12 @@
   & h4,
   & h5,
   & h6 {
-    margin-bottom: 13px;
+    margin-bottom: rem(13px);
     font-size: 1.5em;
     font-weight: bold;  
+    
+    @include tablet {
+      margin-bottom: rem(6px);
+    }
   }
 }

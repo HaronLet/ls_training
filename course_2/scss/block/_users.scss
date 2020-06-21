@@ -1,23 +1,43 @@
+$users__item-activ-border-color: $red-e0;
+
 /*-------------------- block users --------------------*/
 .reviews__user {
   display: flex;
   justify-content: center;
 }
 .users__item {
-  width: 80px;
-  height: 80px;
-  border: 6px solid transparent;
+  width: rem(80px);
+  height: rem(80px);
+  border: rem(6px) solid transparent;
   border-radius: 50%;
   overflow: hidden;
   transition: .3s ease-out;
   cursor: pointer;
 
   &--activ {
-    border: 6px solid #e01f3d;
+    border: rem(6px) solid $users__item-activ-border-color;
   }
 
   &:hover {
-    border: 6px solid #e01f3d;
+    border: rem(6px) solid $users__item-activ-border-color;
     transition: .3s ease-out;
+  }
+
+  @include tablet {
+    width: rem(71px);
+    height: rem(71px);
+
+    &:not(:last-child) {
+      margin-right: rem(13px);
+    }
+  }
+
+  @include mobile {
+    width: rem(66px);
+    height: rem(66px);
+
+    &:not(:last-child) {
+      margin-right: rem(10px);
+    }
   }
 }
