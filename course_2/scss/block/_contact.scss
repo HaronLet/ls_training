@@ -1,17 +1,40 @@
 /*-------------------- block contact --------------------*/
+.contact {
+  @include mobile {
+    margin-bottom: rem(19px);
+  }
+}
+.contact__description {
+  font-size: rem(18px);
+
+  @include tablet {
+    font-size: rem(21px);
+  }
+
+  @include mobile {
+    margin-bottom: rem(12px);
+    font-size: rem(20px);
+    text-align: center;
+  }
+}
 .contact__phone {
   position: relative;
-  font-size: 1.3125em;
+  font-size: rem(21px);
   line-height: 1;
+  white-space: nowrap;
 
   &::before {
     content: "";
     display: inline-block;
     position: absolute;
-    top: 8px;
-    left: -15px;
-    width: 12px;
-    height: 11px;
+    top: rem(8px);
+    left: rem(-15px);
+    width: rem(12px);
+    height: rem(11px);
     background: url(../img/icons/phone.svg) no-repeat center center/contain;
+  }
+
+  @include mobile {
+    font-size: rem(18px);
   }
 }

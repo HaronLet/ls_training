@@ -1,0 +1,38 @@
+$footer-bg-color: $white-ff;
+
+/*-------------------- layout footer --------------------*/
+.footer {
+  min-height: rem(93px);
+  background: $footer-bg-color;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  & .contact__phone {
+    margin-left: rem(15px);
+  }
+
+  @include tablet {
+    min-height: rem(104px);
+  }
+
+  @include mobile {
+    min-height: rem(153px);
+
+    & .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

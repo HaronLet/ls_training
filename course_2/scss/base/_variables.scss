@@ -1,46 +1,63 @@
-// base font size
+// -------------------- fonts --------------------
 $base-font-size: 16px;
+$base-font-family: 'Play', Helvetica, sans-serif;
 
-// base colors
-$base-color-primary: #f5f5f5;
-$base-color-secondary: #e01f3d;
+// -------------------- colors --------------------
+$white-ff: #fff;
+$white-f5: #f5f5f5;
+$white-f8: #f8faf9;
 
-// special colors
-$btn-color-hover: #ca1b36;
+$grey-ef: #efefef;
+$grey-cf: #cfdeda;
+$grey-b2: #b2b2b2;//$bg-color-icon: #b2b2b2;
+$grey-9a: #9a9a9a;//$bg-attribut: #9a9a9a;
+$grey-99: #999;
+$grey-6e: #6e6e6e;//$bg-attribu-hover: #6e6e6e;
+$grey-66: #666;
+$grey-33: #333537;
+$grey-30: #303030;
 
+$red-ca: #ca1b36;
+$red-e0: #e01f3d;
+$red-e4: #e42424;//$bg-color-right-menu: #e42424;
 
-// background color of elements
-$bg-attribut: #9a9a9a;
-$bg-attribu-hover: #6e6e6e;
+$black-15: #151515;
+$black-00: #000;
 
-// text colors
-$text-color-black: #000;
-$text-color-white: #fff;
+// -------------------- width --------------------
+$width-desktop: 1100px;
+$width-tablet: 768px;
+$width-mobile: 480px;
 
-$text-color-secondary: #666;
-$text-color-form: #f8faf9;
+// -------------------- mixin --------------------
+@mixin desktop {
+  @media screen and (max-width: $width-desktop) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: $width-tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $width-mobile) {
+    @content;
+  }
+}
+// -------------------- function --------------------
+@function rem($rem) {
+  @return $rem / $base-font-size + 0rem;
+}
 
-$base-color-third: #999;
+@function vh($elem, $base-vheight) {
+  @return $elem / $base-vheight * 100vh;
+}
 
+@function vw($elem, $base-vwidth) {
+  @return $elem / $base-vwidth * 100vw;
+}
 
-
-
-
-
-
-
-
-$bg-color-grey: #333537;
-
-$bg-color-icon: #b2b2b2;
-
-$bg-color-right-menu: #e42424;
-
-$bg-color-red: #cfdeda;
-
-$bg-color-red: #efebeb;
-$bg-color-red: #303030;
-$bg-color-red: #151515;
-
-$bg-color-red: #efefef;
-
+@function percent($sup, $sub) {
+  @return $sup / $sub * 100%;
+}

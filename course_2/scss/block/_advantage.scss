@@ -1,23 +1,58 @@
+$advetage-bg-color: $white-f5;
+$advetage-p-text-color: $grey-66;
+
 /*-------------------- block advantages --------------------*/
 .advantage {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 0 rem(15px);
+
+  @include tablet {
+    padding: 0 rem(5px);
+  }
+
+  @include mobile {
+    flex-direction: row;
+    text-align: start;
+    margin-bottom: vh(40, 800);
+ }
 }
 .advantage__imege-box {
-  width: 125px;
-  height: 125px;
+  width: rem(125px);
+  height: rem(125px);
   border-radius: 50%;
-  margin-bottom: 27px;
-  padding: 32px;
-  background: $base-color-primary;
+  margin-bottom: rem(27px);
+  padding: rem(32px);
+  background: $advetage-bg-color;
+
+  @include tablet {
+    margin-bottom: rem(22px);
+  }
+
+  @include mobile {
+    flex: 0 0 vw(125, 480);
+    width: vw(125, 480);
+    height: vw(125, 480);
+    padding: vw(32, 480);
+    margin-right: rem(15px);
+    margin-bottom: 0;
+  }
+}
+.advantage__image {
+  width: 100%;
+  height: 100%;
 }
 .advantage__content {
   
   & p {
     line-height: 1.2;
-    color: $text-color-secondary;
+    color: $advetage-p-text-color;
+
+    @include mobile {
+      font-size: vh(16, 800)
+    }
   }
 
   & h2,
@@ -25,8 +60,18 @@
   & h4,
   & h5,
   & h6 {
-    margin-bottom: 13px;
-    font-size: 1.5em;
+    margin-bottom: rem(13px);
+    font-size: rem(24px);
     font-weight: bold;  
+    
+    @include tablet {
+      margin-bottom: rem(6px);
+    }
+
+    @include mobile {
+      margin-bottom: vh(6, 800);
+      font-size: vh(24, 800)
+    }
+
   }
 }

@@ -7,7 +7,7 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
   <link href="./css/normalize.css" rel="stylesheet">
-  <link href="./css/main.css" rel="stylesheet">
+  <link href="./css/main.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +18,9 @@
         <header class="header">
         
           <a href="#" class="logo">
-            <img src="./img/icons/logo.svg" alt="Логотип" class="logo__image">
+            <svg class="logo__image">
+              <use xlink:href="./img/icons/sprite.svg#logo"></use>
+            </svg>
           </a>
         
           <nav class="header__menu menu">
@@ -52,7 +54,7 @@
           </address>
         
           <button class="btn-menu">
-            <img src="" alt="Иконка меню">
+            <img src="./img/icons/menu/gamburger.svg" alt="Иконка меню">
           </button>
         
         </header>
@@ -69,25 +71,31 @@
             <a href="#" class="button">Заказать</a>
           </div>
       
-          <ul class="hero__properties properties">
+          <ul class="properties">
       
             <li class="properties__item">
               <div class="properties__image-box">
-                <img src="./img/icons/hero-props/noise.svg" alt="Иконка" class="properties__image">
+                <svg class="properties__image">
+                  <use xlink:href="./img/icons/sprite.svg#noise"></use>
+                </svg>
               </div>
               <span class="properties__description">Безупречный звук</span>
             </li>
       
             <li class="properties__item">
               <div class="properties__image-box">
-                <img src="./img/icons/hero-props/charging.svg" alt="Иконка" class="properties__image">
+                <svg class="properties__image">
+                  <use xlink:href="./img/icons/sprite.svg#charging"></use>
+                </svg>
               </div>
               <span class="properties__description">До 40 часов работы</span>
             </li>
       
             <li class="properties__item">
               <div class="properties__image-box">
-                <img src="./img/icons/hero-props/plug.svg" alt="Иконка" class="properties__image">
+                <svg class="properties__image">
+                  <use xlink:href="./img/icons/sprite.svg#plug"></use>
+                </svg>
               </div>
               <span class="properties__description">Технология Fast Fuel</span>
             </li>
@@ -99,7 +107,7 @@
     </section>
     
     <section class="advantages">
-      <div class="advantages__container container">
+      <div class="container">
         <h2 class="advantages__title">почему beats solo 3?</h2>
         <h3 class="advantages__subtitle">Процессор W1 работает невероятно эффективно и позволяет легко подключать наушники к различным устройствам Apple.</h3>
 
@@ -107,7 +115,9 @@
 
           <li class="advantages__item advantage">
             <div class="advantage__imege-box">
-              <img src="./img/icons/advantages/battery.svg" alt="Иконка" class="advantage__image">
+              <svg class="advantage__image">
+                <use xlink:href="./img/icons/sprite.svg#battery"></use>
+              </svg>
             </div>
             <div class="advantage__content">
               <h3>40 часов работы</h3>
@@ -117,7 +127,9 @@
 
           <li class="advantages__item advantage">
             <div class="advantage__imege-box">
-              <img src="./img/icons/advantages/sound.svg" alt="Иконка" class="advantage__image">
+              <svg class="advantage__image">
+                <use xlink:href="./img/icons/sprite.svg#sound"></use>
+              </svg>
             </div>
             <div class="advantage__content">
               <h3>Фирменное звучание</h3>
@@ -127,7 +139,9 @@
 
           <li class="advantages__item advantage">
             <div class="advantage__imege-box">
-              <img src="./img/icons/advantages/time.svg" alt="Иконка" class="advantage__image">
+              <svg class="advantage__image">
+                <use xlink:href="./img/icons/sprite.svg#time"></use>
+              </svg>
             </div>
             <div class="advantage__content">
               <h3>Быстрая зарядка</h3>
@@ -180,7 +194,7 @@
         <h2 class="reviews__title">Отзывы</h2>
 
         <ul class="reviews__list">
-          <li class="rewievs__item rewievs__item--activ review">
+          <li class="review rewievs__item rewievs__item--activ">
             <div class="review__avatar-box">
               <img src="./img/users/419-billie-hp-feature-left.png.large.1x.jpg" alt="Фото" class="review__avatar">
             </div>
@@ -255,7 +269,7 @@
 
         <h2 class="form__title">Закажите доставку</h2>
 
-        <form class="form__container">
+        <form class="form__wrapper">
           <div class="form__group">
             <div class="form__row">
           
@@ -338,37 +352,52 @@
       </div>
     </section>
     
-    <!-- <section class="map">
-      <div class="container">
-    
+    <section class="map">
+      <div class="map__yandex">
+        
       </div>
+      
+      <footer class="footer">
+        <div class="container">
+                    
+          <address class="contact">
+            <div class="contact__description">Москва, ул.Новый Арбат, д.31/12</div>
+            <a href="tel:+78009039090" class="contact__phone">8 800 903 90 90</a>
+          </address>
+  
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use xlink:href="./img/icons/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use xlink:href="./img/icons/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use xlink:href="./img/icons/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use xlink:href="./img/icons/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>    
     </section>
-    
-    <footer class="footer">
-      <div class="container">
-                
-        <address class="contact">
-          <div class="contact__description">Москва, ул.Новый Арбат, д.31/12</div>
-          <a href="tel:+78009039090" class="contact__phohe">8 800 903 90 90</a>
-        </address>
-
-        <ul class="footer__social social">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--tg"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--vk"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--fb"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--ig"></a>
-          </li>
-        </ul>
-
-      </div>
-    </footer> -->
 
     <div class="radio-menu">
       <ul class="radio-menu__list">

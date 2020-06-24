@@ -1,39 +1,58 @@
 @import 'base/variables';
 @import 'base/base';
-//-------------------- layout --------------------
+
+//-------------------- hero --------------------
 @import 'layout/header';
 @import 'layout/hero';
-@import 'layout/advantages';
-@import 'layout/products';
-@import 'layout/team';
-@import 'layout/colors';
-@import 'layout/reviews';
-@import 'layout/work';
-@import 'layout/form';
-@import 'layout/map';
-@import 'layout/footer';
-@import 'layout/radio-menu';
-//-------------------- blocks --------------------
+
 @import 'block/logo';
 @import 'block/menu';
 @import 'block/contact';
-
 @import 'block/button';
 @import 'block/properties';
 
+//-------------------- advantages --------------------
+@import 'layout/advantages';
+
 @import 'block/advantage';
+
+//-------------------- products --------------------
+@import 'layout/products';
 
 @import 'block/product';
 
+//-------------------- team --------------------
+@import 'layout/team';
+
 @import 'block/member';
+
+//-------------------- colors --------------------
+@import 'layout/colors';
 
 @import 'block/accordion';
 
-@import 'block/carousel';
+//-------------------- reviews --------------------
+@import 'layout/reviews';
+
 @import 'block/review';
 @import 'block/users';
 
+//-------------------- work --------------------
+@import 'layout/work';
+
+@import 'block/carousel';
+//-------------------- form --------------------
+@import 'layout/form';
+
+//-------------------- map --------------------
+@import 'layout/map';
+
+//-------------------- footer --------------------
+@import 'layout/footer';
 @import 'block/social';
+//-------------------- radio-menu --------------------
+@import 'layout/radio-menu';// +
+
 //-------------------- decor --------------------
 @import 'block/decor';
 

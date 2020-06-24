@@ -1,18 +1,30 @@
 /*-------------------- layout reviews --------------------*/
 .reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
-  padding-top: 55px;
+
+  @include mobile {
+    padding: rem(15px) 0;
+  }
 }
 .reviews__title {
-  margin-bottom: 32px;
-  font-size: 3em;
+  margin-bottom: rem(32px);
+  font-size: rem(48px);
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
+
+  @include mobile {
+    margin-bottom: vh(26, 800);
+    font-size: vh(36, 800);
+  }
 }
 .reviews__list {
-  margin-bottom: 22px;
+  margin-bottom: rem(22px);
 }
 .rewievs__item {
   display: none;
