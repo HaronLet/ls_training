@@ -11,7 +11,6 @@ $hero__image-box-bg-color: $white-ff;
   }
 
   @include mobile {
-    height: auto;
     padding-bottom: rem(15px);
   }
 }
@@ -19,31 +18,37 @@ $hero__image-box-bg-color: $white-ff;
   position: absolute;
   top: 16.5%;
   right: 8%;
-  max-width: rem(500px);
-  max-height: rem(500px);
+  width: rem(500px);
+  height: rem(500px);
   border-radius: 50%;
   padding: rem(10px);
   background: $hero__image-box-bg-color;
   overflow: hidden;
 
+  @include desktop {
+    max-width: vw(500, 1100);
+    max-height: vw(500, 1100);
+  }
+
   @include tablet {
     position: static;
-    max-width: rem(348px);
-    max-height: rem(348px);
+    max-width: vw(348, 768);
+    max-height: vw(348, 768);
     margin: 0 auto;
-    margin-bottom: rem(27px);
+    margin-bottom: vh(27, 1000);
   }
 
   @include mobile {
-    max-width: rem(296px);
-    max-height: rem(296px);
+    max-width: vh(296, 800);
+    max-height: vh(296, 800);
+    margin-bottom: vh(27, 1000);
   }
 }
 .hero__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 70%;
+  height: 70%;//---------------------------------------------------
 
   @include tablet {
     align-items: center;
@@ -60,19 +65,20 @@ $hero__image-box-bg-color: $white-ff;
   text-transform: uppercase;
 
   @include tablet {
-    max-width: 90%;
-    margin-bottom: rem(10px);
+    max-width: 100%;
+    padding: 0 vw(40, 768);
+    margin-bottom: vh(10, 1000);
   }
 
   @include mobile {
-    max-width: 70%;
-    font-size: rem(36px);
+    padding: 0;
+    font-size: vh(36, 800);
   }
 }
 .hero__subtitle {
   max-width: rem(325px);
   margin-bottom: rem(37px);
-  font-size: 1.125em;
+  font-size: rem(18px);
 
   @include tablet {
     margin-bottom: rem(21px);
@@ -80,11 +86,16 @@ $hero__image-box-bg-color: $white-ff;
 
   @include mobile {
     max-width: 70%;
-    margin-bottom: rem(26px);
+    margin-bottom: vh(26, 800);
+    font-size: vh(18, 800);
   }
 }
 .hero__button {
   margin-bottom: rem(92px);
+
+  @include mobile {
+    margin-bottom: vh(92, 800);
+  }
 }
 .hero .properties {
   flex: 1 0;

@@ -15,7 +15,8 @@
   }
 
   @include mobile {
-    margin-bottom: rem(36px);
+    margin-bottom: vh(36, 800);
+    padding-top: vh(23, 800);
   }
 }
 .header__menu {

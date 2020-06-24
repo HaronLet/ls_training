@@ -30,7 +30,7 @@ $review__content-p-color: $grey-66;
   }
 
   @include mobile {
-    padding: rem(58px) rem(38px) rem(55px);
+    padding: vw(58, 480) vw(38, 480) vw(55, 480);
   }
 }
 .review__avatar-box {
@@ -45,8 +45,8 @@ $review__content-p-color: $grey-66;
   }
 
   @include mobile {
-    width: rem(125px);
-    height: rem(125px);
+    width: vh(125, 800);
+    height: vh(125, 800);
     margin-bottom: rem(13px);
   }
 }
@@ -72,10 +72,12 @@ $review__content-p-color: $grey-66;
 
     & p {
       margin-bottom: rem(19px);
+      font-size: vh(18, 800);
     }
 
     & h3 {
       margin-bottom: rem(14px);
+      font-size: vh(27, 800);
     }
   }
 

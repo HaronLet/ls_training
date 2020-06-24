@@ -4,9 +4,10 @@ $radio-menu-activ-bg-color: $red-e4;
 /*-------------------- layout radio-menu --------------------*/
 .radio-menu {
   position: fixed;
-  top: rem(242px);
+  top: 50%;
   right: rem(47px);
-  
+  transform: translate(0, -50%);
+
   @include tablet {
     display: none;
   }

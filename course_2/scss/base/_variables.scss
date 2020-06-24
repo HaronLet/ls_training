@@ -30,6 +30,11 @@ $width-tablet: 768px;
 $width-mobile: 480px;
 
 // -------------------- mixin --------------------
+@mixin desktop {
+  @media screen and (max-width: $width-desktop) {
+    @content;
+  }
+}
 @mixin tablet {
   @media screen and (max-width: $width-tablet) {
     @content;
@@ -43,4 +48,16 @@ $width-mobile: 480px;
 // -------------------- function --------------------
 @function rem($rem) {
   @return $rem / $base-font-size + 0rem;
+}
+
+@function vh($elem, $base-vheight) {
+  @return $elem / $base-vheight * 100vh;
+}
+
+@function vw($elem, $base-vwidth) {
+  @return $elem / $base-vwidth * 100vw;
+}
+
+@function percent($sup, $sub) {
+  @return $sup / $sub * 100%;
 }

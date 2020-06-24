@@ -15,8 +15,8 @@ $advetage-p-text-color: $grey-66;
 
   @include mobile {
     flex-direction: row;
-    align-items: flex-start;
     text-align: start;
+    margin-bottom: vh(40, 800);
  }
 }
 .advantage__imege-box {
@@ -32,9 +32,12 @@ $advetage-p-text-color: $grey-66;
   }
 
   @include mobile {
-    flex: 0 0 rem(125px);
+    flex: 0 0 vw(125, 480);
+    width: vw(125, 480);
+    height: vw(125, 480);
+    padding: vw(32, 480);
     margin-right: rem(15px);
-    margin-bottom: rem(40px);
+    margin-bottom: 0;
   }
 }
 .advantage__image {
@@ -46,6 +49,10 @@ $advetage-p-text-color: $grey-66;
   & p {
     line-height: 1.2;
     color: $advetage-p-text-color;
+
+    @include mobile {
+      font-size: vh(16, 800)
+    }
   }
 
   & h2,
@@ -54,11 +61,17 @@ $advetage-p-text-color: $grey-66;
   & h5,
   & h6 {
     margin-bottom: rem(13px);
-    font-size: 1.5em;
+    font-size: rem(24px);
     font-weight: bold;  
     
     @include tablet {
       margin-bottom: rem(6px);
     }
+
+    @include mobile {
+      margin-bottom: vh(6, 800);
+      font-size: vh(24, 800)
+    }
+
   }
 }

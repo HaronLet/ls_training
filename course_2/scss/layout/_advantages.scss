@@ -5,7 +5,6 @@ $advantages__subtitle-color: $grey-66;
   height: 100vh;
 
   @include mobile {
-    height: auto;
     padding: rem(15px) 0;
   }
 }
@@ -25,7 +24,8 @@ $advantages__subtitle-color: $grey-66;
   text-transform: uppercase;
 
   @include mobile {
-    font-size: rem(36px);
+    margin-bottom: vh(11, 800);
+    font-size: vh(36, 800);
  }
 }
 .advantages__subtitle {
@@ -37,8 +37,8 @@ $advantages__subtitle-color: $grey-66;
   color: $advantages__subtitle-color;
 
   @include mobile {
-    margin-bottom: rem(37px);
-    font-size: rem(16px);
+    margin-bottom: vh(37, 800);
+    font-size: vh(16, 800);
  }
 }
 .advantages__list {

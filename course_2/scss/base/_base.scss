@@ -54,13 +54,17 @@ a {
   margin: 0 auto;
   padding: 0 rem(80px);
 
+  @include desktop {
+    padding: 0 vw(80, 1100);
+  }
+
   @include tablet {
     max-width: $width-tablet;
-    padding: 0 rem(24px);
+    padding: 0 vw(24, 768);
   }
 
   @include mobile {
     max-width: $width-mobile;
-    padding: 0 rem(10px);
+    padding: 0 vw(10, 480);
   }
 }
