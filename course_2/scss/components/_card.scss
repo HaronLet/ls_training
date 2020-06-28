@@ -1,0 +1,26 @@
+/*-------------------- component card --------------------*/
+.card {
+  display: flex;
+  align-items: center;
+
+  // &__aside {
+
+  // }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    // &__header {
+    
+    // }
+
+    // &__content {
+    
+    // }
+
+    // &__footer {
+    
+    // }
+  }
+}
