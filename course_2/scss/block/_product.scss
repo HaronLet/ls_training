@@ -22,11 +22,12 @@ $productAsideBgColor: $white-ff;
     padding: rem(38px);
     background: $productAsideBgColor;
 
-
     @include tablet {
       width: vh(316, 1000);
       height: vh(316, 1000);
       margin-right: 0;
+      margin-left: 0;
+      margin-bottom: rem(26px);
       padding: vh(33, 1000);
     }
   

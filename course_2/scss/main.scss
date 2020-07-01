@@ -1,8 +1,5 @@
 @import 'base/variables';
 @import 'base/base';
-//-------------------- components --------------------
-// @import 'block/card';
-@import 'block/dropdown';
 
 //-------------------- section hero --------------------
 @import 'layout/header';
@@ -23,6 +20,9 @@
 @import 'layout/products';
 
 @import 'block/product';
+@import 'block/slider';
+@import 'block/dropdown';
+@import 'block/product-property';
 
 //-------------------- section team --------------------
 @import 'layout/team';
@@ -43,7 +43,6 @@
 //-------------------- section work --------------------
 @import 'layout/work';
 
-@import 'block/carousel';
 //-------------------- section form --------------------
 @import 'layout/form';
 

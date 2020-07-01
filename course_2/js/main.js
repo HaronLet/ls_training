@@ -10,6 +10,7 @@ menuButton.addEventListener("click", function() {
 
   if (menuButtonChange) {    
     menuBody.style.display = "block";
+    document.body.style.overflowY = "hidden";
     
     menuButtonImg.forEach(function(e) {      
       if(e.className == "btn-menu__img btn-menu__img--activ") {
@@ -20,6 +21,7 @@ menuButton.addEventListener("click", function() {
     });
   } else {    
     menuBody.style.display = "none";
+    document.body.style.overflowY = "visible";
 
     menuButtonImg.forEach(function(e) {      
       if(e.className == "btn-menu__img btn-menu__img--activ") {

@@ -144,29 +144,29 @@ const controlRight = document.querySelector("#slider__control-right");
 const minLeft = 0;
 const maxLeft = -250;
 const step = -50;
-var counterLeft = 0;
-
-controlLeft.addEventListener('click', function(event) {
-
-  if(counterLeft == maxLeft) {
-
-    event.preventDefault();
-  } else {
-
-    counterLeft = counterLeft + step;
-    sliderList.style.left = counterLeft + "px";
-  }
-});
+var counterSlider = 0;
 
 controlRight.addEventListener('click', function(event) {
 
-  if(counterLeft == minLeft) {
+  if(counterSlider == maxLeft) {
 
     event.preventDefault();
   } else {
 
-    counterLeft = counterLeft - step;
-    sliderList.style.left = counterLeft + "px";
+    counterSlider = counterSlider + step;
+    sliderList.style.left = counterSlider + "px";
+  }
+});
+
+controlLeft.addEventListener('click', function(event) {
+
+  if(counterSlider == minLeft) {
+
+    event.preventDefault();
+  } else {
+
+    counterSlider = counterSlider - step;
+    sliderList.style.left = counterSlider + "px";
   }
 });
 

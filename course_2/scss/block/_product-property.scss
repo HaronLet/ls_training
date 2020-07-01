@@ -1,0 +1,23 @@
+/*-------------------- product-property --------------------*/
+.product-property {
+
+  &__list {
+    display: flex;
+    align-items: center;    
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__img {
+    width: rem(30px);
+    height: rem(30px);
+    margin-right: rem(20px);
+  }
+
+  &__name {
+    display: inline-block;
+    min-width: rem(140px);
+  }
+}
