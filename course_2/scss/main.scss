@@ -1,7 +1,7 @@
 @import 'base/variables';
 @import 'base/base';
 
-//-------------------- hero --------------------
+//-------------------- section hero --------------------
 @import 'layout/header';
 @import 'layout/hero';
 
@@ -11,45 +11,48 @@
 @import 'block/button';
 @import 'block/properties';
 
-//-------------------- advantages --------------------
+//-------------------- section advantages --------------------
 @import 'layout/advantages';
 
 @import 'block/advantage';
 
-//-------------------- products --------------------
+//-------------------- section products --------------------
 @import 'layout/products';
 
 @import 'block/product';
+@import 'block/slider';
+@import 'block/dropdown';
+@import 'block/product-property';
 
-//-------------------- team --------------------
+//-------------------- section team --------------------
 @import 'layout/team';
 
 @import 'block/member';
 
-//-------------------- colors --------------------
+//-------------------- section colors --------------------
 @import 'layout/colors';
 
 @import 'block/accordion';
 
-//-------------------- reviews --------------------
+//-------------------- section reviews --------------------
 @import 'layout/reviews';
 
 @import 'block/review';
 @import 'block/users';
 
-//-------------------- work --------------------
+//-------------------- section work --------------------
 @import 'layout/work';
 
-@import 'block/carousel';
-//-------------------- form --------------------
+//-------------------- section form --------------------
 @import 'layout/form';
 
-//-------------------- map --------------------
+//-------------------- section map --------------------
 @import 'layout/map';
 
-//-------------------- footer --------------------
+//-------------------- section footer --------------------
 @import 'layout/footer';
 @import 'block/social';
+
 //-------------------- radio-menu --------------------
 @import 'layout/radio-menu';// +
 

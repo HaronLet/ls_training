@@ -110,7 +110,15 @@ a {
 }
 @media screen and (max-width: 768px) {
   .header__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none;
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0;
+    background: #313436;
+    z-index: 5;
   }
 }
 
@@ -136,7 +144,15 @@ a {
 @media screen and (max-width: 768px) {
   .btn-menu {
     display: block;
+    z-index: 10;
   }
+}
+
+.btn-menu__img {
+  display: none;
+}
+.btn-menu__img--activ {
+  display: inline;
 }
 
 /*-------------------- layout hero --------------------*/
@@ -276,6 +292,16 @@ a {
 .menu__list {
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .menu__list {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 13.8vh;
+    font-size: 2.25rem;
+    color: #fff;
+  }
 }
 
 .menu__item {
@@ -544,6 +570,284 @@ a {
     margin-bottom: 0.75vh;
     font-size: 3vh;
   }
+}
+
+/*-------------------- layout products --------------------*/
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+/*-------------------- block product --------------------*/
+.product {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .product {
+    flex-direction: column;
+  }
+}
+.product__aside {
+  flex-shrink: 0;
+  width: 41.8181818182vw;
+  height: 41.8181818182vw;
+  max-width: 28.75rem;
+  max-height: 28.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 1.25rem;
+  margin-right: 3.625rem;
+  padding: 2.375rem;
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .product__aside {
+    width: 31.6vh;
+    height: 31.6vh;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 1.625rem;
+    padding: 3.3vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__aside {
+    width: 61.0416666667vw;
+    height: 61.0416666667vw;
+    padding: 6.875vw;
+  }
+}
+.product__body {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .product__body {
+    text-align: center;
+  }
+}
+.product__header {
+  margin-bottom: 0.75rem;
+}
+.product__header h3 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .product__header h3 {
+    font-size: 3.75vh;
+  }
+}
+.product__content p {
+  color: #666666;
+}
+@media screen and (max-width: 480px) {
+  .product__content p {
+    font-size: 2vh;
+  }
+}
+.product__content b {
+  color: #000;
+}
+.product__row {
+  display: flex;
+  margin: 2.8125rem 0;
+}
+@media screen and (max-width: 768px) {
+  .product__row {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__row {
+    margin: 9.375vw 0;
+  }
+}
+.product__props {
+  min-width: 9.6875rem;
+  text-align: left;
+}
+@media screen and (max-width: 480px) {
+  .product__props {
+    min-width: 32.2916666667vw;
+  }
+}
+.product__footer {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .product__footer {
+    justify-content: center;
+  }
+}
+.product__price {
+  font-size: 2.25rem;
+}
+.product__price::after {
+  content: url(../img/icons/rub.svg);
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  margin-left: 3px;
+}
+.product__buy {
+  margin-left: 1.75rem;
+}
+@media screen and (max-width: 480px) {
+  .product__buy {
+    margin-left: 3.125vw;
+  }
+}
+
+/*-------------------- layout slider --------------------*/
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.slider__list {
+  width: 100%;
+}
+.slider__item {
+  display: none;
+}
+.slider__item--activ {
+  display: flex;
+}
+.slider__left {
+  position: absolute;
+  top: 50%;
+  left: -1.875rem;
+  transform: translate(0, -50%);
+  border: none;
+  outline: none;
+  margin-right: 0.625rem;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .slider__left {
+    top: 15.4296875vh;
+    left: 16.9270833333vw;
+    transform: translate(0, 0);
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider__left {
+    top: 27.9166666667vw;
+    left: 0;
+  }
+}
+.slider__right {
+  position: absolute;
+  top: 50%;
+  right: -1.875rem;
+  transform: translate(0, -50%);
+  border: none;
+  outline: none;
+  margin-left: 0.625rem;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .slider__right {
+    top: 15.4296875vh;
+    right: 16.9270833333vw;
+    transform: translate(0, 0);
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider__right {
+    top: 27.9166666667vw;
+    right: 0;
+  }
+}
+
+/*-------------------- component dropdown --------------------*/
+.dropdown {
+  position: relative;
+  margin-bottom: 1.625rem;
+}
+@media screen and (max-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+}
+.dropdown__btn {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 1.75rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #9a9a9a;
+  cursor: pointer;
+  transition: .3s ease-out;
+}
+.dropdown__btn:hover {
+  background: #6e6e6e;
+  transition: .3s ease-out;
+}
+.dropdown__btn-img {
+  width: 100%;
+  height: 100%;
+}
+.dropdown__list {
+  position: absolute;
+  top: 0;
+  left: 5.625rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 1.5625rem 1.25rem;
+  background: #fff;
+  transition: .3s ease-out;
+}
+.dropdown__btn:hover ~ .dropdown__list {
+  opacity: 1;
+  height: auto;
+  width: auto;
+  transition: .3s ease-out;
+}
+.dropdown__list:hover {
+  opacity: 1;
+  height: auto;
+  width: auto;
+  transition: .3s ease-out;
+}
+.dropdown__item:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+/*-------------------- product-property --------------------*/
+.product-property__list {
+  display: flex;
+  align-items: center;
+}
+.product-property__item {
+  flex-shrink: 0;
+}
+.product-property__img {
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-right: 1.25rem;
+}
+.product-property__name {
+  display: inline-block;
+  min-width: 8.75rem;
 }
 
 /*-------------------- layout reviews --------------------*/

@@ -1,0 +1,126 @@
+$productAsideBgColor: $white-ff;
+
+/*-------------------- block product --------------------*/
+.product {
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &__aside {
+    flex-shrink: 0;
+    width: vw(460, 1100);
+    height: vw(460, 1100);
+    max-width: rem(460px);
+    max-height: rem(460px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: rem(20px);
+    margin-right: rem(58px);
+    padding: rem(38px);
+    background: $productAsideBgColor;
+
+    @include tablet {
+      width: vh(316, 1000);
+      height: vh(316, 1000);
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: rem(26px);
+      padding: vh(33, 1000);
+    }
+  
+    @include mobile {
+      width: vw(293, 480);
+      height: vw(293, 480);
+      padding: vw(33, 480);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__header {
+    margin-bottom: rem(12px);
+  }
+
+  &__header h3 {
+    font-size: rem(36px);
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: vh(30, 800);
+    }
+  }
+
+  &__content p {
+    color: #666666;
+
+    @include mobile {
+      font-size: vh(16, 800);
+    }
+  }
+
+  &__content b {
+    color: #000;
+  }
+
+  &__row {
+    display: flex;
+    margin: rem(45px) 0;
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include mobile {
+      margin: vw(45, 480) 0;
+    }
+  }
+
+  &__props {
+    min-width: rem(155px);
+    text-align: left;
+
+    @include mobile {
+      min-width: vw(155, 480);
+    }
+  }
+
+  &__footer {
+    display: flex;
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  &__price {
+    font-size: rem(36px);
+
+    &::after {
+      content: url(../img/icons/rub.svg);
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      margin-left: 3px;
+    }
+  }
+
+  &__buy {
+    margin-left: rem(28px);
+
+    @include mobile {
+      margin-left: vw(15, 480);
+    }
+  }
+}

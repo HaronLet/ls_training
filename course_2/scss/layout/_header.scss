@@ -1,3 +1,5 @@
+$headerMenuBgColor: $grey-31;
+
 /*-------------------- layout header --------------------*/
 .header {
   display: flex;
@@ -23,7 +25,15 @@
   margin-left: rem(25px);
 
   @include tablet {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none;
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0;
+    background: $headerMenuBgColor;
+    z-index: 5;
   }
 }
 .header__contact{
@@ -45,5 +55,13 @@
 
   @include tablet {
     display: block;
+    z-index: 10;
+  }
+}
+.btn-menu__img {
+  display: none;
+
+  &--activ {
+    display: inline;
   }
 }

@@ -54,7 +54,8 @@
           </address>
         
           <button class="btn-menu">
-            <img src="./img/icons/menu/gamburger.svg" alt="Иконка меню">
+            <img class="btn-menu__img btn-menu__img--activ" src="./img/icons/menu/gamburger.svg" alt="Иконка меню">
+            <img class="btn-menu__img" src="./img/icons/menu/close.svg" alt="Иконка меню">
           </button>
         
         </header>
@@ -152,20 +153,300 @@
       </div>
     </section>
     
-    <!-- <section class="products">
+    <section class="products">
       <div class="container">
-        <ul class="products__list">
-          <li class="products__item">
-            <div class="product__image">
+        <div class="slider">
+          <button class="slider__left">
+            <img src="./img/icons/menu/left.svg" alt="Иконка" class="slider__left-img">
+          </button>
 
-            </div>
-            <div class="product__content">
+          <ul class="slider__list">
+          
+            <li class="product slider__item slider__item--activ">
+          
+              <div class="product__aside">
+                <img class="product__image" src="./img/content/Beats-grey.jpg" alt="Картинка">
+              </div>
+          
+              <div class="product__body">
+                <div class="product__header">
+                  <div class="dropdown">
+                    <button class="dropdown__btn">
+                      <img src="./img/icons/menu/gear.svg" alt="Иконка">
+                      <!-- <svg class="dropdown__btn-img">
+                        <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                      </svg> -->
+                    </button>
+                    
+                    <ul class="dropdown__list">
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img class="product-property__img" src="./img/icons/product-props/bluetooth.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Bluetooth</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">4.0</span>
+                          </li>
+                        </ul>
+                      </li>
+          
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img class="product-property__img" src="./img/icons/product-props/road.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Дальность</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">10 м</span>
+                          </li>
+                        </ul>
+                      </li>
+          
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img class="product-property__img" src="./img/icons/product-props/charger.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Зарядка</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">2 ч</span>
+                          </li>
+                        </ul>
+                      </li>
+          
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img class="product-property__img" src="./img/icons/product-props/kg.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Вес</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">215 гр</span>
+                          </li>
+                        </ul>
+                      </li>
+          
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img class="product-property__img" src="./img/icons/product-props/patent.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Гарантия</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">1 год</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+          
+                  <h3>beats solo 3. цвет «атласное серебро»</h3>
+                </div>
+                <div class="product__content">
+                  <p>Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</p>
+                  <div class="product__row">
+                    <div class="product__props">
+                      <p>Зарядка</p>
+                      <p><b>2 часа</b></p>
+                    </div>
+                    <div class="product__props">
+                      <p>Вес</p>
+                      <p><b>215 грамм</b></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="product__footer">
+                  <div class="product__price">14 990</div>
+                  <div class="product__buy">
+                    <a href="#" class="button">Заказать</a>
+                  </div>
+                </div>
+              </div>
+          
+            </li>
+          
+            <li class="product slider__item">
+          
+              <div class="product__aside">
+                <img class="product__image" src="./img/content/Beats-grey.jpg" alt="Картинка">
+              </div>
+          
+              <div class="product__body">
+                <div class="product__header">
+                  <div class="dropdown">
+                    <button class="dropdown__btn">
+                      <img src="./img/icons/menu/gear.svg" alt="Иконка">
+                      <!-- <svg class="dropdown__btn-img">
+                        <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                      </svg> -->
+                    </button>
+                    
+                    <ul class="dropdown__list">
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img src="./img/icons/product-props/bluetooth.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Bluetooth</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">4.0</span>
+                          </li>
+                        </ul>
+                      </li>
+          
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img src="./img/icons/product-props/road.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Дальность</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">10 м</span>
+                          </li>
+                        </ul>
+                      </li>
+          
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img src="./img/icons/product-props/charger.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Зарядка</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">2 ч</span>
+                          </li>
+                        </ul>
+                      </li>
+          
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img src="./img/icons/product-props/kg.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Вес</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">215 гр</span>
+                          </li>
+                        </ul>
+                      </li>
+          
+                      <li class="product-property dropdown__item">
+                        <ul class="product-property__list">
+                          <li class="product-property__item">
+                            <img src="./img/icons/product-props/patent.svg" alt="Иконка">
+                            <!-- <svg class="product-property__img">
+                              <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                            </svg> -->
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__name">Гарантия</span>
+                          </li>
+          
+                          <li class="product-property__item">
+                            <span class="product-property__value">1 год</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+          
+                  <h3>beats solo 3. цвет «атласное серебро»</h3>
+                </div>
+                <div class="product__content">
+                  <p>Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</p>
+                  <div class="product__row">
+                    <div class="product__props">
+                      <p>Зарядка</p>
+                      <p><b>2 часа</b></p>
+                    </div>
+                    <div class="product__props">
+                      <p>Вес</p>
+                      <p><b>215 грамм</b></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="product__footer">
+                  <div class="product__price">14 990</div>
+                  <div class="product__buy">
+                    <a href="#" class="button">Заказать</a>
+                  </div>
+                </div>
+              </div>
+          
+            </li>
+          </ul>
 
-            </div>
-          </li>
-        </ul>
+          <button class="slider__right">
+            <img src="./img/icons/menu/right.svg" alt="Иконка" class="slider__right-img">
+          </button>
+        </div>
       </div>
-    </section> -->
+    </section>
     
     <!-- <section class="team">
       <div class="container">
@@ -430,7 +711,7 @@
         </li>
       </ul>
     </div>
-
+    <script src="./js/main.js"></script>
   </div>
 </body>
 </html>
