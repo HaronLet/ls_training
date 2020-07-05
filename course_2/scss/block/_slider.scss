@@ -4,17 +4,25 @@
   display: flex;
   align-items: center;
 
+  .bx-wrapper {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+
   &__list {
     width: 100%;
+
   }
 
-  &__item {
-    display: none;
-  }
+  // &__item {
+  //   display: none;
+  // }
 
-  &__item--activ {
-    display: flex;
-  }
+  // &__item--activ {
+  //   display: flex;
+  // }
 
   &__left {
     position: absolute;

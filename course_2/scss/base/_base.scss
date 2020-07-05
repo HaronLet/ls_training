@@ -50,6 +50,7 @@ a {
   min-height: 100%;
 }
 .container {
+  flex: 0 0;
   max-width: $width-desktop;
   margin: 0 auto;
   padding: 0 rem(80px);

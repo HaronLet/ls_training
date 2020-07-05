@@ -1,0 +1,78 @@
+.member {
+  text-align: center;
+
+  &__avatar-box {
+    max-height: rem(288px);
+    margin-bottom: rem(15px);
+    overflow: hidden;
+
+    @include tablet {
+      width: rem(225px);
+      height: rem(290px);
+    }
+
+    @include mobile {
+      width: vw(140, 480);
+      height: vw(185, 480);
+    }
+  }
+
+  &__avatar {
+    object-fit: contain;
+  }
+
+  &__btn {
+    border: none;
+    outline: none;
+    margin-bottom: rem(6px);
+    padding: 0;
+    font-size: rem(18px);
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+
+    @include tablet {
+      margin-bottom: rem(25px);
+    }
+
+    @include mobile {
+      margin-bottom: rem(15px);
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: rem(9px);
+      height: rem(7px);
+      margin-left: rem(3px);
+      background: url(../img/icons/drop.svg) center center no-repeat;
+      transform: rotate(0deg);
+      transition: .3s ease-out;
+    }
+  }
+  
+  &__btn--active::after {
+    transform: rotate(180deg);
+    transition: .3s ease-out;
+  }  
+
+  &__prof {
+    margin-bottom: rem(5px);
+  }
+
+  &__body {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__body-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__body p {
+    max-width: rem(280px);
+    color: #666;
+  }
+}

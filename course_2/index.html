@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="./fancybox-2.1.7/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
   <link href="./css/normalize.css" rel="stylesheet">
   <link href="./css/main.min.css" rel="stylesheet">
 </head>
@@ -448,21 +450,121 @@
       </div>
     </section>
     
-    <!-- <section class="team">
+    <section class="team">
       <div class="container">
         
         <h2 class="team__title">Команда</h2>
 
         <ul class="team__list">
           <li class="team__item member">
-            <img src="" alt="Фото" class="member__avatar">
-            <span class="member__name">Борис Федорович</span>
-            <span class="member__prof">Главный технолог</span>
-            <p>Отвечает за вкусовые качества и калорийность.</p>
+            <div class="member__avatar-box">
+              <img src="./img/users/photo-1506919258185-6078bba55d2a.jpg" alt="Фото" class="member__avatar">
+            </div>
+            <button class="member__btn">Борис Федорович</button>
+            <div class="member__body">
+              <div class="member__body-block">
+                <div class="member__prof">Главный технолог</div>
+                <p>Отвечает за вкусовые качества и калорийность.</p>
+              </div>
+            </div>
+          </li>
+          <li class="team__item member">
+            <div class="member__avatar-box">
+              <img src="./img/users/photo-1485043433441-db091a258e5a.jpg" alt="Фото" class="member__avatar">
+            </div>
+            <button class="member__btn">Алла Иванова</button>
+            <div class="member__body">
+              <div class="member__body-block">
+                <div class="member__prof">Специалист по упаковке</div>
+                <p>Автор запоминающегося стиля наших батончиков.</p>
+              </div>
+            </div>
+          </li>
+          <li class="team__item member">
+            <div class="member__avatar-box">
+              <img src="./img/users/photo-1568602471122-7832951cc4c5.jpg" alt="Фото" class="member__avatar">
+            </div>
+            <button class="member__btn">Кирилл Матросов</button>
+            <div class="member__body">
+              <div class="member__body-block">
+                <div class="member__prof">Дизайнер</div>
+                <p>Разработал дизан наушников beats solo 3.</p>
+              </div>
+            </div>
+          </li>
+          <li class="team__item member">
+            <div class="member__avatar-box">
+              <img src="./img/users/photo-1521488741203-dcc320950ce5.jpg" alt="Фото" class="member__avatar">
+            </div>
+            <button class="member__btn">Мила Рыжкова</button>
+            <div class="member__body">
+              <div class="member__body-block">
+                <div class="member__prof">PR, маркетинг</div>
+                <p>По всем вопросам сотрудничества и рекламы писать только Миле.</p>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
+
+    <section class="team team--mobile">
+      <div class="container">
+        
+        <h2 class="team__title">Команда</h2>
+
+        <ul class="team__list">
+          <li class="team__item member team__item--active">
+            <button class="member__btn member__btn--active">Борис Федорович</button>
+            <div class="member__body">
+              <div class="member__body-block">
+                <div class="member__avatar-box">
+                  <img src="./img/users/photo-1506919258185-6078bba55d2a.jpg" alt="Фото" class="member__avatar">
+                </div>
+                <div class="member__prof">Главный технолог</div>
+                <p>Отвечает за вкусовые качества и калорийность.</p>
+              </div>
+            </div>
+          </li>
+          <li class="team__item member">
+            <button class="member__btn">Алла Иванова</button>
+            <div class="member__body">
+              <div class="member__body-block">
+                <div class="member__avatar-box">
+                  <img src="./img/users/photo-1485043433441-db091a258e5a.jpg" alt="Фото" class="member__avatar">
+                </div>
+                <div class="member__prof">Специалист по упаковке</div>
+                <p>Автор запоминающегося стиля наших батончиков.</p>
+              </div>
+            </div>
+          </li>
+          <li class="team__item member">
+            <button class="member__btn">Кирилл Матросов</button>
+            <div class="member__body">
+              <div class="member__body-block">
+                <div class="member__avatar-box">
+                  <img src="./img/users/photo-1568602471122-7832951cc4c5.jpg" alt="Фото" class="member__avatar">
+                </div>
+                <div class="member__prof">Дизайнер</div>
+                <p>Разработал дизан наушников beats solo 3.</p>
+              </div>
+            </div>
+          </li>
+          <li class="team__item member">
+            <button class="member__btn">Мила Рыжкова</button>
+            <div class="member__body">
+              <div class="member__body-block">
+                <div class="member__avatar-box">
+                  <img src="./img/users/photo-1521488741203-dcc320950ce5.jpg" alt="Фото" class="member__avatar">
+                </div>
+                <div class="member__prof">PR, маркетинг</div>
+                <p>По всем вопросам сотрудничества и рекламы писать только Миле.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
     
     <!-- <section class="colors">
       <div class="container">
@@ -475,64 +577,52 @@
         <h2 class="reviews__title">Отзывы</h2>
 
         <ul class="reviews__list">
-          <li class="review rewievs__item rewievs__item--activ">
+          <li class="review rewievs__item rewievs__item--activ" data-review="one">
             <div class="review__avatar-box">
               <img src="./img/users/419-billie-hp-feature-left.png.large.1x.jpg" alt="Фото" class="review__avatar">
             </div>
     
             <div class="review__content">
-
               <h3 class="review__title">Отличный звук</h3>
-              
               <p>Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.</p>
-
               <div class="review__author-name">Билли Айлиш</div>
-    
             </div>
           </li>
 
-          <li class="rewievs__item review">
+          <li class="rewievs__item review" data-review="two">
             <div class="review__avatar-box">
               <img src="./img/users/photo.jpg" alt="Фото" class="review__avatar">
             </div>
     
             <div class="review__content">
-
-              <h3 class="review__title">На долго хватает заряда</h3review__content>
-              
+              <h3 class="review__title">На долго хватает заряда</h3>
               <p>Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус.</p>
-
               <div class="review__author-name">Мария Орлова</div>
-    
             </div>
           </li>
 
-          <li class="rewievs__item review">
+          <li class="rewievs__item review" data-review="three">
             <div class="review__avatar-box">
               <img src="./img/users/photo-1468546818829-25bb337b6646.jpg" alt="Фото" class="review__avatar">
             </div>
     
             <div class="review__content">
-
               <h3 class="review__title">Крутой дизайн</h3>
-              
               <p>После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный продукт.</p>
-
               <div class="review__author-name">Вадим Грачев</div>
-    
             </div>
           </li>
 
         </ul>
 
         <ul class="reviews__user users">
-          <li class="users__item users__item--activ">
+          <li class="users__item users__item--activ" data-user="one">
             <img src="./img/users/419-billie-hp-feature-left.png.large.1x.jpg" alt="фото" class="users__avatar">
           </li>
-          <li class="users__item">
+          <li class="users__item" data-user="two">
             <img src="./img/users/photo.jpg" alt="фото" class="users__avatar">
           </li>
-          <li class="users__item">
+          <li class="users__item" data-user="three">
             <img src="./img/users/photo-1468546818829-25bb337b6646.jpg" alt="фото" class="users__avatar">
           </li>
         </ul>
@@ -551,17 +641,18 @@
         <h2 class="form__title">Закажите доставку</h2>
 
         <form class="form__wrapper">
+          <input type="hidden" name="to" value="m@mail.com">
           <div class="form__group">
             <div class="form__row">
           
               <label class="form__label">
                 <span class="form__title-label">Имя</span>
-                <input class="form__input" type="text">
+                <input class="form__input" type="text" name="name">
               </label>
           
               <label class="form__label">
                 <span class="form__title-label">Телефон</span>
-                <input class="form__input" type="tel" placeholder="8 (902)-234-8912">
+                <input class="form__input" type="tel" name="tel" placeholder="8 (902)-234-8912">
               </label>
           
             </div>
@@ -569,7 +660,7 @@
             <div class="form__row">
               <label class="form__label">
                 <span class="form__title-label">Улица</span>
-                <input class="form__input" type="text">
+                <input class="form__input" type="text" name="street">
               </label>
             </div>
           
@@ -577,22 +668,22 @@
           
               <label class="form__label">
                 <span class="form__title-label">Дом</span>
-                <input class="form__input" type="text">
+                <input class="form__input" type="text" name="house">
               </label>
               
               <label class="form__label">
                 <span class="form__title-label">Корпус</span>
-                <input class="form__input" type="text">
+                <input class="form__input" type="text" name="housing">
               </label>
               
               <label class="form__label">
                 <span class="form__title-label">Квартира</span>
-                <input class="form__input" type="number">
+                <input class="form__input" type="number" name="apartment">
               </label>
               
               <label class="form__label">
                 <span class="form__title-label">Этаж</span>
-                <input class="form__input" type="number">
+                <input class="form__input" type="number" name="storey">
               </label>
           
             </div>
@@ -603,7 +694,7 @@
             <div class="form__row">
               <label class="form__label">
                 <span class="form__title-label">Комментарий</span>
-                <textarea class="form__textarea"></textarea>
+                <textarea class="form__textarea" name="comment"></textarea>
               </label>
             </div>
           
@@ -619,7 +710,7 @@
               </label>
 
               <label class="form__label">
-                <input class="form__checkbox" type="checkbox">
+                <input class="form__checkbox" type="checkbox" name="nocall">
                 <span class="form__title-label">Не перезванивать</span>
               </label>
             </div>
@@ -629,9 +720,17 @@
               <input class="form__reset" type="reset" value="Очистить">
             </div>
           </div>
+          <div class="form__row--error"></div>
         </form>
       </div>
     </section>
+
+    <div id="modal" class="modal">
+      <div class="modal__container">
+        <div class="modal__contant">Сообщение отправлено</div>
+      </div>
+      <button class="button modal__btn">Закрыть</button>
+    </div>
     
     <section class="map">
       <div class="map__yandex">
@@ -711,6 +810,10 @@
         </li>
       </ul>
     </div>
+
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="./fancybox-2.1.7/source/jquery.fancybox.pack.js?v=2.1.7"></script>
     <script src="./js/main.js"></script>
   </div>
 </body>
