@@ -116,7 +116,32 @@ const validateFields = (form, fieldsArray) => {
   return errorFields.length === 0;
 }
 
-$('.form__wrapper').submit(e => {
+$('.form__wrapper').find("[name='tel']").keydown((e) => {
+  let isDigit = false;
+  let isDash = false;
+  let isControl = false;
+
+  if (e.key >= 0 && e.key <= 9) {
+      isDigit = true;
+  }
+
+  if (e.key == '-') {
+      isDash = true;
+  }
+
+  if (e.key == 'ArrowLeft' 
+    || e.key == 'ArrowRight' 
+    || e.key == 'Backspace' 
+    || e.key == 'Delete') {
+      isControl = true;
+  }
+
+  if (!isDigit && !isDash && !isControl) {
+      e.preventDefault();
+  }
+});
+
+$('.form__wrapper').submit((e) => {
   e.preventDefault();
 
   const form = $(e.currentTarget);
