@@ -4,23 +4,9 @@ $review__content-p-color: $grey-66;
 
 /*-------------------- block review --------------------*/
 .review {
-  position: relative;
   padding: rem(51px) rem(95px) rem(34px) rem(45px) ;
   background: $review-bg-color;
   overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: rem(-65px);
-    right: 50%;
-    transform: translate(50%, 0);
-    display: block;
-    width: rem(90px);
-    height: rem(90px);
-    border-radius: 50%;
-    background: $review-before-bg-color;
-  }
 
   @include tablet {
     flex-direction: column;

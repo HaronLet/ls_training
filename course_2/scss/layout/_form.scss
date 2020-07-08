@@ -83,6 +83,9 @@ $form-color: $white-ff;
     justify-content: center;
   }
 }
+.form__row--error {
+  display: none;
+}
 .form__title-label {
   display: block;
   margin-bottom: rem(3px);
@@ -103,12 +106,12 @@ $form-color: $white-ff;
 .form__input {
   width: 100%;
   height: rem(58px);
-  border: rem(2px) solid #fff;
+  border: 2px solid #fff;
   padding: 0 rem(10px);
   font-size: rem(18px);
 
   &:focus {
-    border: rem(2px) solid $red-e0;
+    border: 2px solid $red-e0;
     outline: none;
   }
 
@@ -123,12 +126,13 @@ $form-color: $white-ff;
 .form__textarea {
   width: 100%;
   height: rem(180px);
+  border: 2px solid #fff;
   padding: rem(10px);
   font-size: rem(18px);
   resize: none;
 
   &:focus {
-    border: rem(2px) solid $red-e0;
+    border: 2px solid $red-e0;
     outline: none;
   }
 
@@ -222,4 +226,7 @@ $form-color: $white-ff;
   background: transparent;
   font-size: rem(18px);
   color: #999999;
+}
+.input-error {
+  border-color: $red-e0;
 }

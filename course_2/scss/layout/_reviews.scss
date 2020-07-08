@@ -24,7 +24,35 @@
   }
 }
 .reviews__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: rem(22px);
+  overflow: hidden;
+  background: $white-f5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: rem(-65px);
+    right: 50%;
+    transform: translate(50%, 0);
+    display: block;
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: 50%;
+    background: $white-ff;
+  }
+
+  @include tablet {
+    min-height: vh(570, 1024);
+  }
+
+  @include tablet {
+    min-height: vh(575, 800);
+  }
 }
 .rewievs__item {
   display: none;

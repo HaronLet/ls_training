@@ -1,0 +1,36 @@
+.modal {
+  display: none;
+  padding: rem(10px);
+  font-size: rem(18px);
+  text-align: center;
+
+  &__contant {
+    margin-bottom: rem(20px);
+  }
+
+  &__btn {
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.error-modal {
+  color: red;
+}
+.fancybox-close {
+  display: none;
+}
+.fancybox-inner {
+  height: auto !important;
+}
+.fancybox-overlay {
+  background: $grey-31;
+  opacity: .99;
+}
+.fancybox-opened .fancybox-skin {
+  box-shadow: none;
+}
