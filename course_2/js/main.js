@@ -189,6 +189,7 @@ $('.form__wrapper').submit((e) => {
   }
 });
 
+
 $('.modal__btn').click(e => {
   $.fancybox.close();
 });
