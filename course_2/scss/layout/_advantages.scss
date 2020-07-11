@@ -2,7 +2,7 @@ $advantages__subtitle-color: $grey-66;
 
 /*-------------------- layout advantages --------------------*/
 .advantages {
-  height: 100vh;
+  height: 100%;
 
   @include mobile {
     padding: rem(15px) 0;

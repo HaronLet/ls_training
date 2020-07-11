@@ -189,7 +189,277 @@ $('.form__wrapper').submit((e) => {
   }
 });
 
-
 $('.modal__btn').click(e => {
   $.fancybox.close();
+});
+
+//------------------------------ youtube ------------------------------
+let player;
+const playerContainer = $(".player");
+ 
+let eventsInit = () => {
+ $(".player__start").click(e => {
+   e.preventDefault();
+ 
+   if (playerContainer.hasClass("paused")) {
+     player.pauseVideo();
+   } else {
+     player.playVideo();
+   }
+ });
+ 
+ $(".player__playback").click(e => {
+   const bar = $(e.currentTarget);
+   const clickedPosition = e.originalEvent.layerX;
+   const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+   const newPlaybackPositionSec =
+     (player.getDuration() / 100) * newButtonPositionPercent;
+ 
+   $(".player__playback-button").css({
+     left: `${newButtonPositionPercent}%`
+   });
+ 
+   player.seekTo(newPlaybackPositionSec);
+ });
+ 
+ $(".player__splash").click(e => {
+   player.playVideo();
+ })
+};
+ 
+const formatTime = timeSec => {
+ const roundTime = Math.round(timeSec);
+ 
+ const minutes = addZero(Math.floor(roundTime / 60));
+ const seconds = addZero(roundTime - minutes * 60);
+ 
+ function addZero(num) {
+   return num < 10 ? `0${num}` : num;
+ }
+ 
+ return `${minutes} : ${seconds}`;
+};
+ 
+const onPlayerReady = () => {
+ let interval;
+ const durationSec = player.getDuration();
+ 
+ $(".player__duration-estimate").text(formatTime(durationSec));
+ 
+ if (typeof interval !== "undefined") {
+   clearInterval(interval);
+ }
+ 
+ interval = setInterval(() => {
+   const completedSec = player.getCurrentTime();
+   const completedPercent = (completedSec / durationSec) * 100;
+ 
+   $(".player__playback-button").css({
+     left: `${completedPercent}%`
+   });
+ 
+   $(".player__duration-completed").text(formatTime(completedSec));
+ }, 1000);
+};
+ 
+const onPlayerStateChange = event => {
+ /*
+   -1 (воспроизведение видео не начато)
+   0 (воспроизведение видео завершено)
+   1 (воспроизведение)
+   2 (пауза)
+   3 (буферизация)
+   5 (видео подают реплики).
+ */
+ switch (event.data) {
+   case 1:
+     playerContainer.addClass("active");
+     playerContainer.addClass("paused");
+     break;
+ 
+   case 2:
+     playerContainer.removeClass("active");
+     playerContainer.removeClass("paused");
+     break;
+ }
+};
+ 
+function onYouTubeIframeAPIReady() {
+ player = new YT.Player("yt-player", {
+   height: "405",
+   width: "660",
+   videoId: "LXb3EKWsInQ",
+   events: {
+     onReady: onPlayerReady,
+     onStateChange: onPlayerStateChange
+   },
+   playerVars: {
+     controls: 0,
+     disablekb: 0,
+     showinfo: 0,
+     rel: 0,
+     autoplay: 0,
+     modestbranding: 0
+   }
+ });
+}
+ 
+eventsInit();
+
+//------------------------------ map ------------------------------
+let myMap;
+const init = () => {
+ myMap = new ymaps.Map("map", {
+   center: [55.750626, 37.599642],
+   zoom: 14,
+   controls: [],
+ });
+ 
+ let coords = [
+     [55.758594, 37.582604],
+     [55.741068, 37.581126],
+     [55.749142, 37.602781],
+     [55.755991, 37.622498],
+   ],
+   myCollection = new ymaps.GeoObjectCollection({}, {
+     draggable: false,
+     iconLayout: 'default#image',
+     iconImageHref: './img/icons/map.svg',
+     iconImageSize: [46, 57],
+     iconImageOffset: [-35, -52]
+   });
+ 
+ for (let i = 0; i < coords.length; i++) {
+   myCollection.add(new ymaps.Placemark(coords[i]));
+ }
+ 
+ myMap.geoObjects.add(myCollection);
+ 
+ myMap.behaviors.disable('scrollZoom');
+};
+ 
+ymaps.ready(init);
+
+//------------------------------ OnePageScroll ------------------------------
+const sections = $("section");
+const display = $(".maincontent");
+const sideMenu = $(".radio-menu");
+const menuItem = sideMenu.find(".radio-menu__item");
+let inScroll = false;
+
+sections.first().addClass("active");
+
+const countSectionPosition = (sectionEq) => {
+  const position = sectionEq * -100;
+
+  if (isNaN(position)) {
+    console.error("переданно не верное значение в countSectionPosition");
+    return 0;
+  }
+  return position;
+}
+
+const changeSideMenu = (sectionEq) => {
+  
+}
+
+const resetActiveClassForItem = (item, itemEq, activeClass) => {
+  item.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+}
+
+const performTransition = (sectionEq) => { 
+  if (inScroll) return;
+  
+  const transitionOver = 500;
+  const mouseInertiaOver = 200;
+
+  inScroll = true;
+  
+  const position = countSectionPosition(sectionEq);
+
+  display.css({
+    transform: `translateY(${position}%)`,
+  });
+
+  resetActiveClassForItem(sections, sectionEq, "active");
+  resetActiveClassForItem(menuItem, sectionEq, "radio-menu__item--activ");
+  
+  setTimeout(() => {
+    inScroll = false;      
+  }, transitionOver + mouseInertiaOver);
+};
+
+const viewportScroller = (direction) => {
+  const activeSection = sections.filter(".active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  return {
+    next() {
+      if (nextSection.length) { 
+        performTransition(nextSection.index());
+      }
+    },
+    prev () {
+      if (prevSection.length) {
+        performTransition(prevSection.index());
+      }
+    }
+  }
+};
+
+$(window).on("wheel", (e) => { 
+  const deltaY = e.originalEvent.deltaY;
+  const scroller = viewportScroller();
+
+  if (deltaY > 0) {
+    scroller.next();
+  }
+    
+  if (deltaY < 0) {   
+    scroller.prev();
+  }    
+});
+    
+$(window).on("keydown", (e) => {
+  const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName === "input" || tagName === "textarea";
+  const scroller = viewportScroller();
+
+  if (userTypingInInputs) return;
+
+  switch (e.keyCode) { 
+    case 38: //prev
+      scroller.prev(); 
+      break;
+  
+    case 40: //next
+      scroller.next();
+      break;
+  }
+});
+
+$("[data-scroll-to]").click(e => {
+  e.preventDefault();
+  
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+  const reqSection = $(`[data-section-id=${target}]`);
+  
+  performTransition(reqSection.index());
+});
+
+$(".wrapper").on("touchmove", e => e.preventDefault());
+
+// https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+$("body").swipe( {
+  swipe:function(event, direction) {
+    const scroller = viewportScroller();
+    let scrollDirection = "";
+
+    if (direction === "up") scrollDirection = "next";
+    if (direction === "down") scrollDirection = "prev";
+
+    scroller[scrollDirection]();
+  }
 });

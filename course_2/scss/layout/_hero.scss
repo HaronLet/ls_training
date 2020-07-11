@@ -2,7 +2,7 @@ $hero-bg-color: $white-f5;
 $hero__image-box-bg-color: $white-ff;
 /*-------------------- layout hero --------------------*/
 .hero {
-  height: 100vh;
+  height: 100%;
   background: $hero-bg-color;
 
   & .container {

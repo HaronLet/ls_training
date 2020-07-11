@@ -14,6 +14,14 @@ $radio-menu-activ-bg-color: $red-e4;
 }
 .radio-menu__item {
   margin-bottom: rem(5px);
+
+  &--activ a {
+    border-color: $radio-menu-activ-bg-color;
+  }
+
+  &--activ a::before {
+    background: $radio-menu-activ-bg-color;
+  }
 }
 .radio-menu__link {
   position: relative;
@@ -34,14 +42,6 @@ $radio-menu-activ-bg-color: $red-e4;
     height: rem(6px);
     border-radius: 50%;
     background: $radio-menu-bg-color;
-  }
-
-  &--activ {
-    border-color: $radio-menu-activ-bg-color;
-  }
-
-  &--activ::before {
-    background: $radio-menu-activ-bg-color;
   }
 
   &:hover {

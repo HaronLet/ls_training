@@ -2,9 +2,8 @@
 .map {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 .map__yandex {
   flex-grow: 1;
-  background: url(../img/bg/map.jpg) center center/cover no-repeat;
 }

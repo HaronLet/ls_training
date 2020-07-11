@@ -44,10 +44,14 @@ a {
 }
 /*-------------------- layout base --------------------*/
 .wrapper {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.maincontent {
+  height: 100%;
+  transition: transform .3s;
+  will-change: transform;
 }
 .container {
   flex: 0 0;
