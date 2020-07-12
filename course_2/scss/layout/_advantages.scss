@@ -2,6 +2,7 @@ $advantages__subtitle-color: $grey-66;
 
 /*-------------------- layout advantages --------------------*/
 .advantages {
+  position: relative;
   height: 100%;
 
   @include mobile {
@@ -26,7 +27,7 @@ $advantages__subtitle-color: $grey-66;
   @include mobile {
     margin-bottom: vh(11, 800);
     font-size: vh(36, 800);
- }
+  }
 }
 .advantages__subtitle {
   margin-bottom: rem(57px);
@@ -78,4 +79,16 @@ $advantages__subtitle-color: $grey-66;
       display: none;
     }
   }
+}
+.triangle {
+  position: absolute;
+  top: 100%;
+  left: vw(80, 1100);
+  transform: translate(0, -20%) rotate(40deg);
+  width: 0;
+  height: 0;
+  border-top: 33px solid #e01f3d;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  z-index: 5;
 }

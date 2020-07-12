@@ -193,119 +193,6 @@ $('.modal__btn').click(e => {
   $.fancybox.close();
 });
 
-//------------------------------ youtube ------------------------------
-let player;
-const playerContainer = $(".player");
- 
-let eventsInit = () => {
- $(".player__start").click(e => {
-   e.preventDefault();
- 
-   if (playerContainer.hasClass("paused")) {
-     player.pauseVideo();
-   } else {
-     player.playVideo();
-   }
- });
- 
- $(".player__playback").click(e => {
-   const bar = $(e.currentTarget);
-   const clickedPosition = e.originalEvent.layerX;
-   const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
-   const newPlaybackPositionSec =
-     (player.getDuration() / 100) * newButtonPositionPercent;
- 
-   $(".player__playback-button").css({
-     left: `${newButtonPositionPercent}%`
-   });
- 
-   player.seekTo(newPlaybackPositionSec);
- });
- 
- $(".player__splash").click(e => {
-   player.playVideo();
- })
-};
- 
-const formatTime = timeSec => {
- const roundTime = Math.round(timeSec);
- 
- const minutes = addZero(Math.floor(roundTime / 60));
- const seconds = addZero(roundTime - minutes * 60);
- 
- function addZero(num) {
-   return num < 10 ? `0${num}` : num;
- }
- 
- return `${minutes} : ${seconds}`;
-};
- 
-const onPlayerReady = () => {
- let interval;
- const durationSec = player.getDuration();
- 
- $(".player__duration-estimate").text(formatTime(durationSec));
- 
- if (typeof interval !== "undefined") {
-   clearInterval(interval);
- }
- 
- interval = setInterval(() => {
-   const completedSec = player.getCurrentTime();
-   const completedPercent = (completedSec / durationSec) * 100;
- 
-   $(".player__playback-button").css({
-     left: `${completedPercent}%`
-   });
- 
-   $(".player__duration-completed").text(formatTime(completedSec));
- }, 1000);
-};
- 
-const onPlayerStateChange = event => {
- /*
-   -1 (воспроизведение видео не начато)
-   0 (воспроизведение видео завершено)
-   1 (воспроизведение)
-   2 (пауза)
-   3 (буферизация)
-   5 (видео подают реплики).
- */
- switch (event.data) {
-   case 1:
-     playerContainer.addClass("active");
-     playerContainer.addClass("paused");
-     break;
- 
-   case 2:
-     playerContainer.removeClass("active");
-     playerContainer.removeClass("paused");
-     break;
- }
-};
- 
-function onYouTubeIframeAPIReady() {
- player = new YT.Player("yt-player", {
-   height: "405",
-   width: "660",
-   videoId: "LXb3EKWsInQ",
-   events: {
-     onReady: onPlayerReady,
-     onStateChange: onPlayerStateChange
-   },
-   playerVars: {
-     controls: 0,
-     disablekb: 0,
-     showinfo: 0,
-     rel: 0,
-     autoplay: 0,
-     modestbranding: 0
-   }
- });
-}
- 
-eventsInit();
-
 //------------------------------ map ------------------------------
 let myMap;
 const init = () => {
@@ -489,3 +376,230 @@ function accordeon(selector) {
 }
 
 new accordeon('#acc-menu');
+
+//------------------------------ player ------------------------------
+function playerApiHtml5(selector) {
+  const playerContainer = document.querySelector(selector);
+  const player = playerContainer.querySelector('[data-player]');
+  const playerControlMainPlay = playerContainer.querySelector('[data-control="mainPlay"]');
+
+  const playerControlPlay = playerContainer.querySelector('[data-control="playPause"]');
+  const playerControlPlayback = playerContainer.querySelector('[data-control="playback"]');
+  const playerControlPlayCurrent = playerContainer.querySelector('[data-control="playCurrent"]');
+  const playerControlPlaybackBtn = playerContainer.querySelector('[data-control="playbackBtn"]');
+
+  const playerControlMuted = playerContainer.querySelector('[data-control="muted"]');
+  const playerControlVolumeback = playerContainer.querySelector('[data-control="volumeback"]');
+  const playerControlVolumeCurrent = playerContainer.querySelector('[data-control="volumeCurrent"]');
+  const playerControlVolumebackBtn = playerContainer.querySelector('[data-control="volumebackBtn"]');
+  
+  playerContainer.addEventListener('click', function(e) {
+    const target = e.target;
+    const classPlay = "play";
+    const classPause = "pause";
+    const classMuted = "muted";
+
+    let isPlay = player.paused;
+
+    e.preventDefault();
+
+    if (target.closest('[data-control]') === playerControlPlay) {
+      if (isPlay) {
+      player.play();
+      target.classList.add(classPlay);
+      target.classList.remove(classPause);
+
+      playerControlMainPlay.classList.add(classPlay);
+      playerControlMainPlay.classList.remove(classPause);
+      } else {
+      player.pause();
+      target.classList.add(classPause);
+      target.classList.remove(classPlay);
+
+      playerControlMainPlay.classList.add(classPause);
+      playerControlMainPlay.classList.remove(classPlay);
+      }
+    }
+
+    if (target.closest('[data-control]') === playerControlMainPlay) {
+      if (isPlay) {
+      player.play();
+      target.classList.add(classPlay);
+      target.classList.remove(classPause);
+
+      playerControlPlay.classList.add(classPlay);
+      playerControlPlay.classList.remove(classPause);
+      } else {
+      player.pause();
+      target.classList.add(classPause);
+      target.classList.remove(classPlay);
+
+      playerControlPlay.classList.add(classPause);
+      playerControlPlay.classList.remove(classPlay);
+      }
+    }
+
+    if (target.closest('[data-control]') === playerControlMuted) {
+      if (player.muted) {
+      player.muted = false;
+      target.classList.remove(classMuted);
+    } else {
+      player.muted = true;
+      target.classList.add(classMuted);
+      }
+    }
+
+    if (target.closest('[data-control]') === playerControlPlayback) {
+      const clickedPosition = e.offsetX;
+      const widthElemStyle = getComputedStyle(target).width;
+      const widthElem = widthElemStyle.slice(0, widthElemStyle.length-2);
+      const newButtonPositionPercent = (clickedPosition / widthElem) * 100;
+      
+      player.currentTime = (player.duration / 100) * newButtonPositionPercent;
+      
+      playerControlPlaybackBtn.style.left = `${newButtonPositionPercent}%`;
+      playerControlPlayCurrent.style.width = `${100 - newButtonPositionPercent}%`;
+    }
+
+    if (target.closest('[data-control]') === playerControlVolumeback) {
+      const clickedPosition = e.offsetX;
+      const widthElemStyle = getComputedStyle(target).width;
+      const widthElem = widthElemStyle.slice(0, widthElemStyle.length-2);
+      const newButtonPositionPercent = (clickedPosition / widthElem) * 100;
+      
+      player.volume = newButtonPositionPercent / 100;
+      
+      playerControlVolumebackBtn.style.left = `${newButtonPositionPercent}%`;
+      playerControlVolumeCurrent.style.width = `${100 - newButtonPositionPercent}%`;
+    }
+
+    player.addEventListener("play", function() {
+      playerControlVolumebackBtn.style.left = `${player.volume * 100}%`;
+      playerControlVolumeCurrent.style.width = `${100 - player.volume * 100}%`;
+    });
+
+    player.addEventListener("timeupdate", function() {
+      const newButtonPositionPercent = (player.currentTime / player.duration) * 100;
+
+      playerControlPlaybackBtn.style.left = `${newButtonPositionPercent}%`;
+      playerControlPlayCurrent.style.width = `${100 - newButtonPositionPercent}%`;
+    });
+
+    return;
+  }); 
+}
+
+new playerApiHtml5('#player');
+
+//------------------------------ youtube ------------------------------
+// let player;
+// const playerContainer = $(".player");
+ 
+// let eventsInit = () => {
+//  $(".player__start").click(e => {
+//    e.preventDefault();
+ 
+//    if (playerContainer.hasClass("paused")) {
+//      player.pauseVideo();
+//    } else {
+//      player.playVideo();
+//    }
+//  });
+ 
+//  $(".player__playback").click(e => {
+//    const bar = $(e.currentTarget);
+//    const clickedPosition = e.originalEvent.layerX;
+//    const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+//    const newPlaybackPositionSec =
+//      (player.getDuration() / 100) * newButtonPositionPercent;
+ 
+//    $(".player__playback-button").css({
+//      left: `${newButtonPositionPercent}%`
+//    });
+ 
+//    player.seekTo(newPlaybackPositionSec);
+//  });
+ 
+//  $(".player__splash").click(e => {
+//    player.playVideo();
+//  })
+// };
+ 
+// const formatTime = timeSec => {
+//  const roundTime = Math.round(timeSec);
+ 
+//  const minutes = addZero(Math.floor(roundTime / 60));
+//  const seconds = addZero(roundTime - minutes * 60);
+ 
+//  function addZero(num) {
+//    return num < 10 ? `0${num}` : num;
+//  }
+ 
+//  return `${minutes} : ${seconds}`;
+// };
+ 
+// const onPlayerReady = () => {
+//  let interval;
+//  const durationSec = player.getDuration();
+ 
+//  $(".player__duration-estimate").text(formatTime(durationSec));
+ 
+//  if (typeof interval !== "undefined") {
+//    clearInterval(interval);
+//  }
+ 
+//  interval = setInterval(() => {
+//    const completedSec = player.getCurrentTime();
+//    const completedPercent = (completedSec / durationSec) * 100;
+ 
+//    $(".player__playback-button").css({
+//      left: `${completedPercent}%`
+//    });
+ 
+//    $(".player__duration-completed").text(formatTime(completedSec));
+//  }, 1000);
+// };
+ 
+// const onPlayerStateChange = event => {
+//  /*
+//    -1 (воспроизведение видео не начато)
+//    0 (воспроизведение видео завершено)
+//    1 (воспроизведение)
+//    2 (пауза)
+//    3 (буферизация)
+//    5 (видео подают реплики).
+//  */
+//  switch (event.data) {
+//    case 1:
+//      playerContainer.addClass("active");
+//      playerContainer.addClass("paused");
+//      break;
+ 
+//    case 2:
+//      playerContainer.removeClass("active");
+//      playerContainer.removeClass("paused");
+//      break;
+//  }
+// };
+ 
+// function onYouTubeIframeAPIReady() {
+//  player = new YT.Player("yt-player", {
+//    height: "405",
+//    width: "660",
+//    videoId: "LXb3EKWsInQ",
+//    events: {
+//      onReady: onPlayerReady,
+//      onStateChange: onPlayerStateChange
+//    },
+//    playerVars: {
+//      controls: 0,
+//      disablekb: 0,
+//      showinfo: 0,
+//      rel: 0,
+//      autoplay: 0,
+//      modestbranding: 0
+//    }
+//  });
+// }
+ 
+// eventsInit();

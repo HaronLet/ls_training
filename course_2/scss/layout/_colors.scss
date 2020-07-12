@@ -1,9 +1,9 @@
 .colors {
   height: 100%;
-  background: url('../img/bg/accordion.jpg') center center/cover no-repeat;
+  background: #000 url('../img/bg/accordion.jpg') left -630px center/cover no-repeat;
 
-  @include mobile {
-    padding: rem(15px) 0;
+  @include tablet {
+    background-position: left -830px center;
   }
 
   & .container {
@@ -16,6 +16,10 @@
     line-height: 1.2;
     text-transform: uppercase;
     color: #fff;
+
+    @include mobile {
+      font-size: vw(48, 480);
+    }
   }
 }
 
@@ -29,13 +33,27 @@
     right: 0;
     display: flex;
     height: 100%;
+
+    @include mobile {
+      justify-content: flex-end;
+      width: 100%;
+    }
   }
   
   &__item {
     display: flex;
     height: 100%;
   }
-  
+
+  @include mobile {
+    &__item.active {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
+
   &__trigger {
     display: flex;
     justify-content: center;
@@ -45,6 +63,11 @@
     outline: none;
     padding: 0 rem(50px);
     cursor: pointer;
+    
+    @include mobile {
+      width: rem(80px);
+      padding: rem(50px) 0;
+    }
   }
   
   &__title {
@@ -54,25 +77,45 @@
     font-weight: bold;
     color: #fff;
     white-space: nowrap;
+
+    @include tablet {
+      font-size: rem(48px);
+    }
+    
+    @include mobile {
+      font-size: rem(36px);
+    }
   }
   
   &__wrap {
     width: 0;
     overflow: hidden;
-    transition: .3s;
+    transition: 1s;
   }
   
   &__content {
     position: relative;
-    min-width: rem(530px);
+    max-width: rem(530px);
     height: 100%;
     overflow-y: auto;
     padding: rem(34px) rem(112px) rem(34px) rem(28px);
     background-color: rgba(51, 53, 55, .93);
     color: #fff;
     
+    @include tablet {
+      max-width: rem(475px);
+    }
+
+    @include mobile {
+      padding: rem(50px) rem(30px) rem(30px) rem(28px);
+    }
+
     & p {
       line-height: 1.5;
+
+      @include mobile {
+        font-size: vw(16, 480);
+      }
     }
   }
   
@@ -87,9 +130,21 @@
     padding: 0 ;
     background: transparent;
     cursor: pointer;
+
+    @include mobile {
+      right: rem(10px);
+    }
   }
 }
 
 .accordeon .active .accordeon__wrap {
   width: rem(530px);
+
+  @include tablet {
+    width: rem(475px);
+  }
+
+  @include mobile {
+    width: auto;
+  }
 }

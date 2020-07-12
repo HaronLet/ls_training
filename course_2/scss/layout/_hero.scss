@@ -2,6 +2,7 @@ $hero-bg-color: $white-f5;
 $hero__image-box-bg-color: $white-ff;
 /*-------------------- layout hero --------------------*/
 .hero {
+  position: relative;
   height: 100%;
   background: $hero-bg-color;
 
@@ -103,4 +104,14 @@ $hero__image-box-bg-color: $white-ff;
   @include tablet {
     display: none;
   }
+}
+.rectangle {
+  position: absolute;
+  top: 100%;
+  right: vw(80, 1100);
+  transform: translate(0, -50%) rotate(40deg);
+  width: 11px;
+  height: 47px;
+  background: #999;
+  z-index: 5;
 }

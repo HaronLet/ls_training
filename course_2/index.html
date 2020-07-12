@@ -107,6 +107,7 @@
         
           </div>
         </div>
+        <div class="rectangle"></div>
       </section>
       
       <section data-section-id="advantages" class="advantages">
@@ -153,6 +154,7 @@
             </li>
           </ul>
         </div>
+        <div class="triangle"></div>
       </section>
       
       <section data-section-id="products" class="products">
@@ -448,6 +450,7 @@
             </button>
           </div>
         </div>
+        <div class="square"></div>
       </section>
       
       <section data-section-id="team" class="team">
@@ -670,13 +673,34 @@
             </li>
           </ul>
         </div>
+        <div class="circle"></div>
       </section>
       
       <section data-section-id="work" class="work">
         <div class="container">
-      
+          <h2 class="work__title">Как мы работаем</h2>
 
+          <div class="player" id="player">
+            <video class="player__video" preload="none" poster="./img/poster.jpg" data-player>
+              <source type="video/mp4" src="./video/videoplayback.mp4" />
+            </video>
+            <button class="player__splash" data-control="mainPlay"></button>
+            
+            <div class="player__controls">
+              <button class="player__start" data-control="playPause"></button>
+              <div class="player__playback" data-control="playback">
+                <button class="player__playback-button" data-control="playbackBtn"></button>
+                <div class="player__playcurrent" data-control="playCurrent"></div>
+              </div>
+              <button class="player__muted" data-control="muted"></button>
+              <div class="player__volumeback" data-control="volumeback">
+                <button class="player__volumeback-button" data-control="volumebackBtn"></button>
+                <div class="player__volumecurrent" data-control="volumeCurrent"></div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="pentagon"></div>
       </section>
       
       <section data-section-id="form" class="form">
