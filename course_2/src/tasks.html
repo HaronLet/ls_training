@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/tasks.css">
+</head>
+<body>
+  <h2>Общие задачи</h2>
+  <ul>
+    <li>
+      <h3>#1 Фильтрация строки</h3>
+      <input type="text" id="in_task_1" value="Привет! Как дела?">
+      <div>Показать только гласные</div>
+      <button id="btn_1">Показать</button>
+      <textarea id="out_task_1" cols="30" rows="5" disabled></textarea>
+    </li>
+    <li>
+      <h3>#2 Выборка объекта</h3>
+      <input type="text" id="in_name_task_2" placeholder="Имя">
+      <input type="text" id="in_salary_task_2" placeholder="Зарплата">
+      <button id="in_btn_2">Добавить сотрудника</button>
+      <textarea id="in_staff_2" cols="30" rows="5" disabled></textarea>
+      <div>Показать имена сотрудников с зарплатой больше 1000</div>
+      <button id="out_btn_2">Показать имена</button>
+      <textarea id="out_task_2" cols="30" rows="5" disabled></textarea>
+    </li>
+    <li>
+      <h3>#3 Анализ строки</h3>
+      <input type="text" id="in_task_3" value="/users/download/index.html">
+      <button id="btn_3">Проверить расширение файла</button>
+      <textarea id="out_task_3" cols="30" rows="5" disabled></textarea>
+    </li>
+    <li>
+      <h3>#1 Фильтрация массива</h3>
+      <div>Исходный массив</div>
+      <textarea id="arr_4" cols="30" rows="5" disabled></textarea>
+      <input type="text" id="in_elem_arr_2" placeholder="Добавить число">
+      <button id="in_btn_4">Добавить число к массиву</button>
+      <button id="out_btn_4">Показать чётные числа</button>
+      <textarea id="out_arr_4" cols="30" rows="5" disabled></textarea>
+    </li>
+  </ul>
+  <h2>Задачи по DOM</h2>
+  <ul>
+    <li>
+      <h3>#1 Простой слайдер</h3>
+      <div class="slider">
+        <button id="slider__control-left">←</button>
+        <div class="slider__wrapper">
+          <ul id="slider__list">
+            <li class="slider__item">1</li>
+            <li class="slider__item">2</li>
+            <li class="slider__item">3</li>
+            <li class="slider__item">4</li>
+            <li class="slider__item">5</li>
+            <li class="slider__item">6</li>
+            <li class="slider__item">7</li>
+            <li class="slider__item">8</li>
+          </ul>
+        </div>
+        <button id="slider__control-right">→</button>
+      </div>
+    </li>
+    <li id="modal-container">
+      <h3>#2 Модальное окно</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed laboriosam labore illum pariatur sequi nihil at explicabo magnam omnis quisquam? Commodi amet animi, eos nulla quaerat facere. Doloremque, voluptatum beatae.</p>
+      <button id="btn_open">Открыть</button>
+      
+    </li>
+    <li>
+      <h3>#1 Создание и работа с DOM</h3>
+      <input type="number" min="0" class="counter">
+      <input type="color" class="color">
+      <div class="container"></div>
+    </li>
+  </ul>
+  <script src="./js/tasks.js"></script>
+</body>
+</html>

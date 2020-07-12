@@ -1,3 +1,4 @@
+;(function() {
 //------------------------------ menu ------------------------------
 const menuButton = document.querySelector(".btn-menu");
 const menuBody = document.querySelector(".header__menu");
@@ -603,3 +604,4 @@ new playerApiHtml5('#player');
 // }
  
 // eventsInit();
+})();
