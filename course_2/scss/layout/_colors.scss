@@ -1,11 +1,95 @@
 .colors {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100%;
+  background: url('../img/bg/accordion.jpg') center center/cover no-repeat;
 
   @include mobile {
     padding: rem(15px) 0;
   }
+
+  & .container {
+    padding-top: rem(85px);
+  }
+
+  &__title {
+    font-size: rem(48px);
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+.accordeon {
+  position: relative;
+  min-height: 100%;
+
+  &__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100%;
+  }
+  
+  &__item {
+    display: flex;
+    height: 100%;
+  }
+  
+  &__trigger {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: rem(100px);
+    border: none;
+    outline: none;
+    padding: 0 rem(50px);
+    cursor: pointer;
+  }
+  
+  &__title {
+    transform: rotate(-90deg);
+    width: 100%;
+    font-size: rem(36px);
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+  }
+  
+  &__wrap {
+    width: 0;
+    overflow: hidden;
+    transition: .3s;
+  }
+  
+  &__content {
+    position: relative;
+    min-width: rem(530px);
+    height: 100%;
+    overflow-y: auto;
+    padding: rem(34px) rem(112px) rem(34px) rem(28px);
+    background-color: rgba(51, 53, 55, .93);
+    color: #fff;
+    
+    & p {
+      line-height: 1.5;
+    }
+  }
+  
+  &__close {
+    position: absolute;
+    right: rem(32px);
+    top: rem(26px);
+    width: rem(20px);
+    height: rem(20px);
+    border: none;
+    outline: none;
+    padding: 0 ;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+.accordeon .active .accordeon__wrap {
+  width: rem(530px);
 }
