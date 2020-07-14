@@ -35,6 +35,12 @@ task('copy:fancybox', () => {
     .pipe(reload({ stream: true }));
 });
 
+// task('copy:Owl', () => {
+//   return src('./course_2/src/OwlCarousel2-2.3.4/**/*')
+//     .pipe(dest('./course_2/dist/OwlCarousel2-2.3.4'))
+//     .pipe(reload({ stream: true }));
+// });
+
 task('copy:img', () => {
   return src('./course_2/src/img/**/*')
     .pipe(dest('./course_2/dist/img'))
@@ -70,7 +76,7 @@ task('styles', () => {
 });
 
 task('scripts', () => {
-  return src('./course_2/src/js/!(tasks.js)*')
+  return src('./course_2/src/js/main.js')
     .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(concat('main.min.js'))
     .pipe(gulpif(env === 'prod', babel({
@@ -132,7 +138,8 @@ task('default',
       'copy:html',
       'copy:img',
       'copy:video', 
-      'copy:fancybox', 
+      'copy:fancybox',
+      // 'copy:Owl',
       'styles', 
       'scripts',
       'icons'), 
@@ -146,7 +153,8 @@ task('build',
       'copy:html',
       'copy:img',
       'copy:video', 
-      'copy:fancybox', 
+      'copy:fancybox',
+      // 'copy:Owl',
       'styles', 
       'scripts',
       'icons'

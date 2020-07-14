@@ -7,9 +7,8 @@ const menuButtonImg = document.querySelectorAll(".btn-menu__img");
 
 var menuButtonChange = false;
 
-menuButton.addEventListener("click", function() {
+const menuAction = function () {
   menuButtonChange = !menuButtonChange;
-
   if (menuButtonChange) {    
     menuBody.style.display = "block";
     document.body.style.overflowY = "hidden";
@@ -33,6 +32,14 @@ menuButton.addEventListener("click", function() {
       }
     });
   }
+};
+
+menuBody.addEventListener("click", function() {
+  menuAction();
+});
+
+menuButton.addEventListener("click", function() {
+  menuAction();
 });
 
 //------------------------------ slideshow ------------------------------
@@ -90,6 +97,32 @@ $(".member__btn").click((e) => {
 });
 
 //------------------------------ slider ------------------------------
+// var owl = $('.slider__list');
+
+// owl.owlCarousel({
+//   loop:true,
+//   responsive:{
+//     0:{
+//         items:1
+//     },
+//     600:{
+//         items:1
+//     },
+//     1000:{
+//         items:1
+//     }
+//   }
+// });
+
+// owl.on('mousewheel', '.owl-stage', function (e) {
+//   if (e.deltaY>0) {
+//       owl.trigger('.slider__right');
+//   } else {
+//       owl.trigger('.slider__left');
+//   }
+//   e.preventDefault();
+// });
+
 const slider = $('.slider__list').bxSlider({
   pager: false,
   controls: false
@@ -336,22 +369,28 @@ $("[data-scroll-to]").click(e => {
   
   performTransition(reqSection.index());
 });
-
-document.querySelector(".wrapper").addEventListener("touchmove", e => e.preventDefault(), { passive: false });
+// const wrap = document.querySelector(".wrapper");
+// wrap.addEventListener("touchmove", e => e.preventDefault(), false);
 
 // https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
-$("body").swipe( {
-  swipe:function(event, direction) {
-    const scroller = viewportScroller();
-    let scrollDirection = "";
+let wrapperWidth = $(".wrapper").width();
 
-    if (direction === "up") scrollDirection = "next";
-    if (direction === "down") scrollDirection = "prev";
+if (wrapperWidth < 768) {
+  $("body").swipe( {
+    swipe:function(event, direction) {
+      const scroller = viewportScroller();
+      let scrollDirection = "";
 
-    scroller[scrollDirection]();
-  }
-});
-
+      if (direction === "up") {
+        scroller.next();
+      }
+      
+      if (direction === "down") {
+        scroller.prev();
+      }
+    }
+  });
+}
 //------------------------------ accordeon ------------------------------
 
 function Accordeon(selector) {
