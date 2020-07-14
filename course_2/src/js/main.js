@@ -1,5 +1,6 @@
 ;(function() {
 //------------------------------ menu ------------------------------
+
 const menuButton = document.querySelector(".btn-menu");
 const menuBody = document.querySelector(".header__menu");
 const menuButtonImg = document.querySelectorAll(".btn-menu__img");
@@ -297,13 +298,15 @@ $(window).on("wheel", (e) => {
   const deltaY = e.originalEvent.deltaY;
   const scroller = viewportScroller();
 
-  if (deltaY > 0) {
-    scroller.next();
+  if (!menuButtonChange) {
+    if (deltaY > 0) {
+      scroller.next();
+    }
+      
+    if (deltaY < 0) {   
+      scroller.prev();
+    }
   }
-    
-  if (deltaY < 0) {   
-    scroller.prev();
-  }    
 });
     
 $(window).on("keydown", (e) => {
@@ -334,7 +337,7 @@ $("[data-scroll-to]").click(e => {
   performTransition(reqSection.index());
 });
 
-$(".wrapper").on("touchmove", e => e.preventDefault());
+document.querySelector(".wrapper").addEventListener("touchmove", e => e.preventDefault(), { passive: false });
 
 // https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
 $("body").swipe( {
@@ -351,7 +354,7 @@ $("body").swipe( {
 
 //------------------------------ accordeon ------------------------------
 
-function accordeon(selector) {
+function Accordeon(selector) {
   const acco = document.querySelector(selector);
   const items = acco.querySelector('[data-list]').children;
   
@@ -376,10 +379,10 @@ function accordeon(selector) {
   });
 }
 
-new accordeon('#acc-menu');
+new Accordeon('#acc-menu');
 
 //------------------------------ player ------------------------------
-function playerApiHtml5(selector) {
+function PlayerApiHtml5(selector) {
   const playerContainer = document.querySelector(selector);
   const player = playerContainer.querySelector('[data-player]');
   const playerControlMainPlay = playerContainer.querySelector('[data-control="mainPlay"]');
@@ -490,7 +493,7 @@ function playerApiHtml5(selector) {
   }); 
 }
 
-new playerApiHtml5('#player');
+new PlayerApiHtml5('#player');
 
 //------------------------------ youtube ------------------------------
 // let player;

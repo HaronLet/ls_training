@@ -35,7 +35,8 @@
     padding: 0;
     background: transparent;
     cursor: pointer;
-
+    z-index: 5;
+    
     @include tablet {
       top: vh(158, 1024);
       left: vw(130, 768);
@@ -59,6 +60,7 @@
     padding: 0;
     background: transparent;
     cursor: pointer;
+    z-index: 5;
 
     @include tablet {
       top: vh(158, 1024);
