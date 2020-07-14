@@ -1,0 +1,72 @@
+$teamBgColor: $white-ff;
+
+/*-------------------- layout team --------------------*/
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background: $teamBgColor;
+
+  & .container {
+    min-height: rem(660px);
+
+    @include mobile {
+      min-height: vh(660, 800);
+    }
+  }
+
+  &__desktop {
+    display: block;
+    min-height: 100%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(54px);
+    font-size: rem(48px);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+  
+    @include mobile {
+      margin-bottom: vh(26, 800);
+      font-size: vh(36, 800);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 0 0 calc(100% / 4 - 15px);
+  }
+
+  &__mobile {
+    display: none;
+    height: 100%;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
+.team__item--active {
+  @include tablet {
+
+    & .member__body {
+      height: auto;
+    }
+  }
+}

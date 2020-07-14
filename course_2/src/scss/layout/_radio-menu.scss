@@ -1,0 +1,56 @@
+$radio-menu-bg-color: $grey-99;
+$radio-menu-activ-bg-color: $red-e4;
+
+/*-------------------- layout radio-menu --------------------*/
+.radio-menu {
+  position: fixed;
+  top: 50%;
+  right: rem(47px);
+  transform: translate(0, -50%);
+
+  @include tablet {
+    display: none;
+  }
+}
+.radio-menu__item {
+  margin-bottom: rem(5px);
+
+  &--activ a {
+    border-color: $radio-menu-activ-bg-color;
+  }
+
+  &--activ a::before {
+    background: $radio-menu-activ-bg-color;
+  }
+}
+.radio-menu__link {
+  position: relative;
+  display: block;
+  width: rem(16px);
+  height: rem(16px);
+  border: rem(1px) solid transparent;
+  border-radius: 50%;
+  transition: .3s ease-out;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(6px);
+    height: rem(6px);
+    border-radius: 50%;
+    background: $radio-menu-bg-color;
+  }
+
+  &:hover {
+    border-color: $radio-menu-activ-bg-color;
+    transition: .3s ease-out;
+  }
+
+  &:hover::before {
+    background: $radio-menu-activ-bg-color;
+    transition: .3s ease-out;
+  }
+}

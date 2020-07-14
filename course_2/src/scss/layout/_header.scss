@@ -1,0 +1,67 @@
+$headerMenuBgColor: $grey-31;
+
+/*-------------------- layout header --------------------*/
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(81px);
+  padding-top: rem(23px);
+
+  & .logo {
+    flex-shrink: 0;
+  }
+
+  @include tablet {
+    justify-content: space-between;
+    margin-bottom: rem(125px);
+  }
+
+  @include mobile {
+    margin-bottom: vh(36, 800);
+    padding-top: vh(23, 800);
+  }
+}
+.header__menu {
+  margin-left: rem(25px);
+
+  @include tablet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100%;
+    margin-left: 0;
+    background: $headerMenuBgColor;
+    z-index: 5;
+  }
+}
+.header__contact{
+  flex-grow: 1;
+  text-align: right;
+
+  @include tablet {
+    display: none;
+  }
+}
+.btn-menu {
+  width: rem(24px);
+  display: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+
+  @include tablet {
+    display: block;
+    z-index: 10;
+  }
+}
+.btn-menu__img {
+  display: none;
+
+  &--activ {
+    display: inline;
+  }
+}

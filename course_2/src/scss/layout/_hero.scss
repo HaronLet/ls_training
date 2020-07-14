@@ -1,0 +1,117 @@
+$hero-bg-color: $white-f5;
+$hero__image-box-bg-color: $white-ff;
+/*-------------------- layout hero --------------------*/
+.hero {
+  position: relative;
+  height: 100%;
+  background: $hero-bg-color;
+
+  & .container {
+    position: relative;
+    height: 100%;
+  }
+
+  @include mobile {
+    padding-bottom: rem(15px);
+  }
+}
+.hero__image-box {
+  position: absolute;
+  top: 16.5%;
+  right: 8%;
+  width: rem(500px);
+  height: rem(500px);
+  border-radius: 50%;
+  padding: rem(10px);
+  background: $hero__image-box-bg-color;
+  overflow: hidden;
+
+  @include desktop {
+    max-width: vw(500, 1100);
+    max-height: vw(500, 1100);
+  }
+
+  @include tablet {
+    position: static;
+    max-width: vw(348, 768);
+    max-height: vw(348, 768);
+    margin: 0 auto;
+    margin-bottom: vh(27, 1000);
+  }
+
+  @include mobile {
+    max-width: vh(296, 800);
+    max-height: vh(296, 800);
+    margin-bottom: vh(27, 1000);
+  }
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;//---------------------------------------------------
+
+  @include tablet {
+    align-items: center;
+    height: auto;
+    text-align: center;
+  }
+}
+.hero__title {
+  max-width: rem(405px);
+  margin-bottom: rem(19px);
+  font-size: rem(48px);
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @include tablet {
+    max-width: 100%;
+    padding: 0 vw(40, 768);
+    margin-bottom: vh(10, 1000);
+  }
+
+  @include mobile {
+    padding: 0;
+    font-size: vh(36, 800);
+  }
+}
+.hero__subtitle {
+  max-width: rem(325px);
+  margin-bottom: rem(37px);
+  font-size: rem(18px);
+
+  @include tablet {
+    margin-bottom: rem(21px);
+  }
+
+  @include mobile {
+    max-width: 70%;
+    margin-bottom: vh(26, 800);
+    font-size: vh(18, 800);
+  }
+}
+.hero__button {
+  margin-bottom: rem(92px);
+
+  @include mobile {
+    margin-bottom: vh(92, 800);
+  }
+}
+.hero .properties {
+  flex: 1 0;
+  
+  @include tablet {
+    display: none;
+  }
+}
+.rectangle {
+  position: absolute;
+  top: 100%;
+  right: vw(80, 1100);
+  transform: translate(0, -50%) rotate(40deg);
+  width: 11px;
+  height: 47px;
+  background: #999;
+  z-index: 5;
+}

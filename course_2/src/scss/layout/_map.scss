@@ -1,0 +1,9 @@
+/*-------------------- layout map --------------------*/
+.map {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.map__yandex {
+  flex-grow: 1;
+}
